@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Softness.Filtros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace Softness.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+       // [AutorizacaoFilter]
         public ActionResult Index()
         {
             return View();

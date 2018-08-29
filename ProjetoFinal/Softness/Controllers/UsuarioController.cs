@@ -22,7 +22,7 @@ namespace Softness.Controllers
             Usuario usuario = dao.Busca(nomeusuario, senha);
             if (usuario != null)
             {
-               // Session["usuarioLogado"] = usuario;
+                Session["usuarioLogado"] = usuario;
                 return RedirectToAction("Index", "Home");
             }
             else

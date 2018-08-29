@@ -13,14 +13,14 @@ namespace Softness.Filtros
         {
             object usuario = filterContext.HttpContext.Session["UsuarioLogado"];
 
-            //if (usuario == null)
-            //{
-            //    filterContext = new RedirectToRouteResult(
-            //        new RouteValueDictionary(
-            //            new {controller = Action = "Index"}
-            //            )
-            //        );
-            //}
+            if (usuario == null)
+            {
+                filterContext.Result = new RedirectToRouteResult(
+                    new RouteValueDictionary(
+                        new { controller = "Usuario", action = "Index"}
+                        )
+                    );
+            }
         }
     }
 }

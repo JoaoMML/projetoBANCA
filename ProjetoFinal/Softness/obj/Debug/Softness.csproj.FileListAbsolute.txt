@@ -143,6 +143,7 @@ C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Xml.XmlDocum
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Xml.XmlSerializer.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Xml.XPath.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Xml.XPath.XDocument.dll
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Antlr3.Runtime.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.EntityFrameworkCore.Design.dll
@@ -161,6 +162,7 @@ C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extension
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extensions.Options.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extensions.Primitives.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Newtonsoft.Json.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Remotion.Linq.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Buffers.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Collections.Immutable.dll
@@ -173,10 +175,13 @@ C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Numerics.Vec
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Helpers.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Mvc.dll
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Optimization.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Razor.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.WebPages.Deployment.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.WebPages.dll
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.WebPages.Razor.dll
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\WebGrease.dll
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Antlr3.Runtime.pdb
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.EntityFrameworkCore.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
@@ -194,6 +199,7 @@ C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extension
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extensions.Options.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Newtonsoft.Json.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\Remotion.Linq.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Buffers.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Collections.Immutable.xml
@@ -204,11 +210,11 @@ C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Numerics.Vec
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Helpers.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Mvc.xml
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Optimization.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.Razor.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.WebPages.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.WebPages.Deployment.xml
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\bin\System.Web.WebPages.Razor.xml
-C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\obj\Debug\Softness.csprojAssemblyReference.cache
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\obj\Debug\Softness.dll.config
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\obj\Debug\Softness.csproj.CoreCompileInputs.cache
 C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\obj\Debug\Softness.csproj.CopyComplete
