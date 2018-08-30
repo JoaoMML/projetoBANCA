@@ -443,3 +443,4 @@ C:\Users\juba_\Desktop\ProjetoFinal\projetoBANCA\ProjetoFinal\Softness\obj\Debug
 C:\Users\juba_\Desktop\ProjetoFinal\projetoBANCA\ProjetoFinal\Softness\obj\Debug\Softness.csproj.CopyComplete
 C:\Users\juba_\Desktop\ProjetoFinal\projetoBANCA\ProjetoFinal\Softness\obj\Debug\Softness.dll
 C:\Users\juba_\Desktop\ProjetoFinal\projetoBANCA\ProjetoFinal\Softness\obj\Debug\Softness.pdb
+C:\Users\v010\Desktop\ProjetoFinal\ProjetoFinal\Softness\obj\Debug\Softness.csprojAssemblyReference.cache
