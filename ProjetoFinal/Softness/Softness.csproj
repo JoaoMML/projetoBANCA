@@ -6643,6 +6643,10 @@
     <Compile Include="Migrations\20180824195104_PessoasEndereco.designer.cs">
       <DependentUpon>20180824195104_PessoasEndereco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180903201627_PessoaId.cs" />
+    <Compile Include="Migrations\20180903201627_PessoaId.designer.cs">
+      <DependentUpon>20180903201627_PessoaId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Pessoa.cs" />
@@ -7261,6 +7265,7 @@
     <Content Include="Views\Shared\_MainView.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Usuario\CadastroUsuario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

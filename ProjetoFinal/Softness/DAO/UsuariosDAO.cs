@@ -9,16 +9,16 @@ namespace Softness.DAO
 {
     public class UsuariosDAO
     {
-        public void Adiciona(Pessoa pessoa, Endereco endereco)
+        public void Adiciona(Usuario usuario)
         {
             using (var context = new SoftnessContext())
             {
-                context.Pessoas.Add(pessoa);
+                context.Usuarios.Add(usuario);
                 context.SaveChanges();
             }
         }
 
-        public IList<Pessoa> Lista()
+        public IList <Pessoa> Lista()
         {
             using (var contexto = new SoftnessContext())
             {
@@ -26,7 +26,7 @@ namespace Softness.DAO
             }
         }
 
-        public Pessoa BuscaPorId(int id)
+        public Pessoa BuscaPorId (int id)
         {
             using (var contexto = new SoftnessContext())
             {
@@ -50,5 +50,11 @@ namespace Softness.DAO
                 return contexto.Usuarios.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeDeUsuario == login && f.Senha == senha);
             }
         }
+   
+        // FAZER
+
+        // Autentica - bool
+        // Inclusao - Insert - void
+        // Edicao - BD
     }
 }
