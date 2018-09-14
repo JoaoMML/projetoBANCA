@@ -21,13 +21,13 @@ namespace Softness.App_Start
 
             bundles.Add(new StyleBundle("~/bundles/css")
                 .Include(
-                "~/Content/Template/bower_components/bootstrap/dist/css/bootstrap.min.css",
+                "~/Content/Template/bower_components/bootstrap/dist/css/bootstrap.css",
+                "~/Content/Template/bower_components/bootstrap/dist/css/Styles.css",
                  "~/Content/Template/bower_components/font-awesome/css/font-awesome.min.css",
                 "~/Content/Template/bower_components/Ionicons/css/ionicons.min.css",
                 "~/Content/Template/dist/css/AdminLTE.min.css",
                 "~/Content/Template/dist/css/skins/_all-skins.min.css"));
 
-            //BundleTable.EnableOptimizations = true;
 
         }
     }

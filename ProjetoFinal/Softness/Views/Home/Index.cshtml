@@ -27,14 +27,37 @@
             </div>
         </div>
         <div class="box-body">
-            <form>
-                <div class="form-group">
-                    <label> Nome: </label>
-                    <div class="input-group">
-
-                        <input type="text" class="form-control" name="cliente.pessoa.Nome" id="ClienteNome">
+            <form action="/Usuario/AdicionaPessoa">
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input id="nome" class="form-control" name="nome" />
                     </div>
                 </div>
+                <div>
+                    <div class="form-group">
+                        <label for="rg">RG:</label>
+                        <input class="form-control controle-tamanho" id="rg" name="rg" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input class="form-control controle-tamanho" id="cpf" name="cpf" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefone:</label>
+
+                    <div class="input-group">
+                        <div class="input-group-addon controle-caixa">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <input type="text" class="form-control" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="">
+                    </div>
+                </div>
+
+                <input type="submit" />
             </form>
         </div>
         <!-- /.box-body -->

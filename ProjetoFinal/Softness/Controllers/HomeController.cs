@@ -10,7 +10,7 @@ namespace Softness.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-       [AutorizacaoFilter]
+       //[AutorizacaoFilter]
         public ActionResult Index()
         {
             return View();

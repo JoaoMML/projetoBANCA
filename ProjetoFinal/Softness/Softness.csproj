@@ -472,6 +472,7 @@
     <Content Include="Content\Template\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
     <Content Include="Content\Template\bower_components\bootstrap\dist\css\bootstrap.css" />
     <Content Include="Content\Template\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\Template\bower_components\bootstrap\dist\css\Styles.css" />
     <Content Include="Content\Template\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Template\bower_components\bootstrap\dist\js\bootstrap.js" />
     <Content Include="Content\Template\bower_components\bootstrap\dist\js\bootstrap.min.js" />
