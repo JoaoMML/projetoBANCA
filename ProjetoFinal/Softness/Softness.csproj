@@ -6629,9 +6629,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
-    <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -6644,10 +6644,19 @@
     <Compile Include="Migrations\20180824195104_PessoasEndereco.designer.cs">
       <DependentUpon>20180824195104_PessoasEndereco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180920172709_UsuarioParaFuncionario.cs" />
+    <Compile Include="Migrations\20180920172709_UsuarioParaFuncionario.designer.cs">
+      <DependentUpon>20180920172709_UsuarioParaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180920202459_Cliente.cs" />
+    <Compile Include="Migrations\20180920202459_Cliente.designer.cs">
+      <DependentUpon>20180920202459_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Pessoa.cs" />
-    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -7258,10 +7267,11 @@
     <Content Include="Content\Template\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Content\Template\plugins\input-mask\phone-codes\phone-codes.json" />
     <None Include="packages.config" />
-    <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Shared\_MainView.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Funcionario\Login.cshtml" />
+    <Content Include="Views\Funcionario\Form.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

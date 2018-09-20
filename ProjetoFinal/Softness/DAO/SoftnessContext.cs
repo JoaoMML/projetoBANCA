@@ -9,7 +9,7 @@ namespace Softness.DAO
 {
     public class SoftnessContext : DbContext
     {
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
 

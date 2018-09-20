@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Softness.DAO;
 
 namespace Softness.Migrations
 {
     [DbContext(typeof(SoftnessContext))]
-    partial class SoftnessContextModelSnapshot : ModelSnapshot
+    [Migration("20180920172709_UsuarioParaFuncionario")]
+    partial class UsuarioParaFuncionario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,7 @@ namespace Softness.Migrations
 
                     b.Property<string>("NomeDeUsuario");
 
-                    b.Property<int?>("PessoaId");
+                    b.Property<int>("PessoaId");
 
                     b.Property<string>("Senha");
 
@@ -106,7 +108,8 @@ namespace Softness.Migrations
                 {
                     b.HasOne("Softness.Models.Pessoa", "Pessoa")
                         .WithMany()
-                        .HasForeignKey("PessoaId");
+                        .HasForeignKey("PessoaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Softness.Models.Pessoa", b =>

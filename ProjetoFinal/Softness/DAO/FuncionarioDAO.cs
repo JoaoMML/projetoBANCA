@@ -7,13 +7,13 @@ using System.Web;
 
 namespace Softness.DAO
 {
-    public class UsuariosDAO
+    public class FuncionarioDAO
     {
-        public void Adiciona(Pessoa pessoa, Endereco endereco)
+        public void Adiciona(Funcionario funcionario)
         {
             using (var context = new SoftnessContext())
             {
-                context.Pessoas.Add(pessoa);
+                context.Funcionarios.Add(funcionario);
                 context.SaveChanges();
             }
         }
@@ -43,11 +43,11 @@ namespace Softness.DAO
             }
         }
 
-        public Usuario Busca(string login, string senha)
+        public Funcionario Busca(string login, string senha)
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Usuarios.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeDeUsuario == login && f.Senha == senha);
+                return contexto.Funcionarios.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeDeUsuario == login && f.Senha == senha);
             }
         }
     }

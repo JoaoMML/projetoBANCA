@@ -5,10 +5,9 @@ using System.Web;
 
 namespace Softness.Models
 {
-    public class Usuario
+    public class Funcionario
     {
         public int Id { get; set; }
-        public int PessoaId { get; set; }
         public Pessoa Pessoa { get; set; }
         public string NomeDeUsuario { get; set; }
         public string Senha { get; set; }
