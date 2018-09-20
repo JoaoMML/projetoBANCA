@@ -16,26 +16,6 @@ namespace Softness.Controllers
             return View();
         }
 
-        public ActionResult Cadastro()
-        {
-            ViewBag.Usuario = new Usuario() { Pessoa = new Pessoa() { Endereco = new Endereco() } };
-            return View();
-        }
-
-        public ActionResult AdicionaProfessor(Usuario usuario)
-        {
-            UsuariosDAO novo = new UsuariosDAO();
-            if (usuario != null)
-            {
-                novo.Adiciona(usuario);
-                return RedirectToAction("Index", "Home");
-            }
-            else
-            {
-                return RedirectToAction("AdicionaProfessor");
-            }
-        }
-
         public ActionResult Autentica(String nomeusuario, String senha)
         {
             UsuariosDAO dao = new UsuariosDAO();
@@ -43,13 +23,13 @@ namespace Softness.Controllers
             if (usuario != null)
             {
                 Session["usuarioLogado"] = usuario;
-                return RedirectToAction("CadastroUsuario", "Usuario");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
                 return RedirectToAction("Index");
             }
-
+            
 
         }
     }

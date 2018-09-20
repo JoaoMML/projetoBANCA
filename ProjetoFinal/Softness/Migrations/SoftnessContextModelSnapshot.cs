@@ -89,7 +89,7 @@ namespace Softness.Migrations
 
                     b.Property<string>("NomeDeUsuario");
 
-                    b.Property<int?>("PessoaId");
+                    b.Property<int>("PessoaId");
 
                     b.Property<string>("Senha");
 
@@ -114,7 +114,8 @@ namespace Softness.Migrations
                 {
                     b.HasOne("Softness.Models.Pessoa", "Pessoa")
                         .WithMany()
-                        .HasForeignKey("PessoaId");
+                        .HasForeignKey("PessoaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
