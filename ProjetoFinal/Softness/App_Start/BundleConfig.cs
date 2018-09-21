@@ -12,11 +12,13 @@ namespace Softness.App_Start
         {
             bundles.Add(new ScriptBundle("~/bundles/js")
                 .Include(
-                "~/Content/Template/bower_components/jquery/dist/jquery.min.js",
+              //  "~/Content/Template/bower_components/jquery/dist/jquery.min.js",
+                "~/Content/Template/bower_components/jquery/dist/jquery-3.3.1.js",
                 "~/Content/Template/bower_components/bootstrap/dist/js/bootstrap.min.js",
                 "~/Content/Template/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
                 "~/Content/Template/bower_components/fastclick/lib/fastclick.js",
                 "~/Content/Template/dist/js/adminlte.min.js",
+                "~/Content/Template/plugins/JqueryMask/jquery.mask.min.js",
                 "~/Content/Template/dist/js/demo.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css")

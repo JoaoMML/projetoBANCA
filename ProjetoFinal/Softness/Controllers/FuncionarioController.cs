@@ -38,10 +38,10 @@ namespace Softness.Controllers
                 return RedirectToAction("Login", "Funcionario");
             }
         }
-        public ActionResult AdicionaFuncioanrio(Funcionario funcionario)
+        public ActionResult AdicionaFuncioanrio(Funcionario funcionario, string repetindoASenha)
         {
             FuncionarioDAO dao = new FuncionarioDAO();
-            if(funcionario != null)
+            if(funcionario != null && repetindoASenha == funcionario.Senha)
             {
                 dao.Adiciona(funcionario);
                 return RedirectToAction("Index", "Home");

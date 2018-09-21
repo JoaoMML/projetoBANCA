@@ -18,27 +18,27 @@ namespace Softness.DAO
             }
         }
 
-        public IList<Pessoa> Lista()
+        public IList<Funcionario> Lista()
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Pessoas.ToList();
+                return contexto.Funcionarios.ToList();
             }
         }
 
-        public Pessoa BuscaPorId(int id)
+        public Funcionario BuscaPorId(int id)
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Pessoas.Find(id);
+                return contexto.Funcionarios.Find(id);
             }
         }
 
-        public void Atualiza(Pessoa pessoa)
+        public void Atualiza(Funcionario Funcionarios)
         {
             using (var contexto = new SoftnessContext())
             {
-                contexto.Entry(pessoa).State = EntityState.Modified;
+                contexto.Entry(Funcionarios).State = EntityState.Modified;
                 contexto.SaveChanges();
             }
         }
