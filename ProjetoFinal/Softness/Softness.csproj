@@ -7275,6 +7275,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Funcionario\Login.cshtml" />
     <Content Include="Views\Funcionario\Form.cshtml" />
+    <Content Include="Views\Funcionario\Tabela.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

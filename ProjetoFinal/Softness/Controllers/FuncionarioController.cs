@@ -24,6 +24,14 @@ namespace Softness.Controllers
             return View();
         }
 
+        public ActionResult Tabela()
+        {
+            FuncionarioDAO dao = new FuncionarioDAO();
+            IList<Funcionario> funcionarios = dao.Lista();
+            ViewBag.Funcionarios = funcionarios;
+            return View();
+        }
+
         public ActionResult Autentica(String nomeusuario, String senha)
         {
             FuncionarioDAO dao = new FuncionarioDAO();

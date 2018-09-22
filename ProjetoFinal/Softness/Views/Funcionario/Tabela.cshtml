@@ -1,0 +1,22 @@
+﻿
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome de Usuario</th>
+            <th>Tipo de Acesso</th>
+            <th>Cargo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var funcionario in ViewBag.Funcionarios)
+        {
+        <tr>
+            <td>@funcionario.Id</td>
+            <td>@funcionario.NomeDeUsuario</td>
+            <td>@funcionario.TipoDeAcesso</td>
+            <td>@funcionario.Cargo</td>
+        </tr>
+        }
+    </tbody>
+</table>
