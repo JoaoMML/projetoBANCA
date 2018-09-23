@@ -17,7 +17,7 @@ namespace Softness.Filtros
             {
                 filterContext.Result = new RedirectToRouteResult(
                     new RouteValueDictionary(
-                        new { controller = "Usuario", action = "Index"}
+                        new { controller = "Funcionario", action = "Login"}
                         )
                     );
             }

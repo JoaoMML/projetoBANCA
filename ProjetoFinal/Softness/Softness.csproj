@@ -6631,8 +6631,10 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
@@ -6654,6 +6656,10 @@
     <Compile Include="Migrations\20180920202459_Cliente.cs" />
     <Compile Include="Migrations\20180920202459_Cliente.designer.cs">
       <DependentUpon>20180920202459_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180923002337_ClientesADD.cs" />
+    <Compile Include="Migrations\20180923002337_ClientesADD.designer.cs">
+      <DependentUpon>20180923002337_ClientesADD.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -7276,6 +7282,7 @@
     <Content Include="Views\Funcionario\Login.cshtml" />
     <Content Include="Views\Funcionario\Form.cshtml" />
     <Content Include="Views\Funcionario\Tabela.cshtml" />
+    <Content Include="Views\Cliente\Form.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

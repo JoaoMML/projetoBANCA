@@ -1,0 +1,31 @@
+﻿using Softness.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Softness.DAO;
+
+namespace Softness.Controllers
+{
+    public class ClienteController : Controller
+    {
+        // GET: Cliente
+        public ActionResult Form()
+        {
+            ViewBag.Funcionario = new Cliente();
+            ViewBag.Funcionario.Pessoa = new Pessoa();
+            ViewBag.Funcionario.Pessoa.Endereco = new Endereco();
+
+            return View();
+        }
+
+
+        public ActionResult AdicionaCliente(Cliente cliente)
+        {
+            ClienteDAO;
+
+
+        }
+    }
+}

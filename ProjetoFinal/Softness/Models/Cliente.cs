@@ -10,6 +10,6 @@ namespace Softness.Models
         public int Id { get; set; }
         public Pessoa Pessoa { get; set; }
         public string NomeUsuario { get; set; }
-        public string senha { get; set; }
+        public string Senha { get; set; }
     }
 }

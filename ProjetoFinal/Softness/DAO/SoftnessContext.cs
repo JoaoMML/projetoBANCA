@@ -12,7 +12,7 @@ namespace Softness.DAO
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
-
+        public DbSet<Cliente> Clientes { get; set; }
 
 
 

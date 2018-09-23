@@ -19,6 +19,25 @@ namespace Softness.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Softness.Models.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeUsuario");
+
+                    b.Property<int?>("PessoaId");
+
+                    b.Property<string>("Senha");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PessoaId");
+
+                    b.ToTable("Clientes");
+                });
+
             modelBuilder.Entity("Softness.Models.Endereco", b =>
                 {
                     b.Property<int>("Id")
@@ -100,6 +119,13 @@ namespace Softness.Migrations
                     b.HasIndex("EnderecoId");
 
                     b.ToTable("Pessoas");
+                });
+
+            modelBuilder.Entity("Softness.Models.Cliente", b =>
+                {
+                    b.HasOne("Softness.Models.Pessoa", "Pessoa")
+                        .WithMany()
+                        .HasForeignKey("PessoaId");
                 });
 
             modelBuilder.Entity("Softness.Models.Funcionario", b =>

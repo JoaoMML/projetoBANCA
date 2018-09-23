@@ -15,6 +15,7 @@ namespace Softness.Controllers
         {
             return View();
         }
+
         public ActionResult Form()
         {
             ViewBag.Funcionario = new Funcionario();
@@ -46,7 +47,7 @@ namespace Softness.Controllers
                 return RedirectToAction("Login", "Funcionario");
             }
         }
-        public ActionResult AdicionaFuncioanrio(Funcionario funcionario, string repetindoASenha)
+        public ActionResult AdicionaFuncionario(Funcionario funcionario, string repetindoASenha)
         {
             FuncionarioDAO dao = new FuncionarioDAO();
             if(funcionario != null && repetindoASenha == funcionario.Senha)
