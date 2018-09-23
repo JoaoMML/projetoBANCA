@@ -29,6 +29,7 @@
         </div>
         <div class="box-body">
             <form class="form-horizontal" action="/Funcionario/AdicionaFuncionario" method="post">
+                @Html.AntiForgeryToken()
 
                 <!-- Text input-->
                 <div class="form-group">

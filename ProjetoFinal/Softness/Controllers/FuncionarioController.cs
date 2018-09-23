@@ -16,6 +16,7 @@ namespace Softness.Controllers
             return View();
         }
 
+        // [Route("/nomeDarotapersonalizada")]  
         public ActionResult Form()
         {
             ViewBag.Funcionario = new Funcionario();
@@ -47,6 +48,8 @@ namespace Softness.Controllers
                 return RedirectToAction("Login", "Funcionario");
             }
         }
+
+        [ValidateAntiForgeryToken] // Valida o Token do form
         public ActionResult AdicionaFuncionario(Funcionario funcionario, string repetindoASenha)
         {
             FuncionarioDAO dao = new FuncionarioDAO();
