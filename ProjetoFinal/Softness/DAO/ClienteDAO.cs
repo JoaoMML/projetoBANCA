@@ -13,32 +13,32 @@ namespace Softness.DAO
         {
             using (var context = new SoftnessContext())
             {
-                context.Cliente.Add(cliente);
+                context.Clientes.Add(cliente);
                 context.SaveChanges();
             }
         }
 
-        public IList<Funcionario> Lista()
+        public IList<Cliente> Lista()
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Funcionarios.ToList();
+                return contexto.Clientes.ToList();
             }
         }
 
-        public Funcionario BuscaPorId(int id)
+        public Cliente BuscaPorId(int id)
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Funcionarios.Find(id);
+                return contexto.Clientes.Find(id);
             }
         }
 
-        public void Atualiza(Funcionario Funcionarios)
+        public void Atualiza(Cliente Clientes)
         {
             using (var contexto = new SoftnessContext())
             {
-                contexto.Entry(Funcionarios).State = EntityState.Modified;
+                contexto.Entry(Clientes).State = EntityState.Modified;
                 contexto.SaveChanges();
             }
         }

@@ -21,11 +21,17 @@ namespace Softness.Controllers
         }
 
 
-        public ActionResult AdicionaCliente(Cliente cliente)
+        public ActionResult AdicionaCliente(Cliente cliente, string repetindoSenha)
         {
-            ClienteDAO;
-
-
+            ClienteDAO dao = new ClienteDAO();
+            if( cliente!=null && repetindoSenha == cliente.Senha)
+            {
+                dao.Adiciona(cliente);
+                return RedirectToAction ("Index","Home");
+            } else
+            {
+                return RedirectToAction ("Form");
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-<!-- Content Header (Page header) -->
+﻿<!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
         Cadastro de Clientes
@@ -29,7 +28,7 @@
             </div>
         </div>
         <div class="box-body">
-            <form class="form-horizontal" action="/Funcionario/AdicionaUsuario" method="post">
+            <form class="form-horizontal" action="/Cliente/AdicionaCliente" method="post">
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -250,29 +249,11 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="nome">Nome Usuário:</label>
                             <div class="col-md-3">
-                                <input id="nome" name="cliente.NomeDeUsuario" type="text" placeholder="Digite aqui o nome.." class="form-control input-md">
+                                <input id="user" name="cliente.NomeUsuario" type="text" placeholder="Digite aqui o nome.." class="form-control input-md">
 
                             </div>
                         </div>
 
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="tipoDeAcesso">Tipo de Acesso:</label>
-                            <div class="col-md-4">
-                                <select id="tipoDeAcesso" name="cliente.TipoDeAcesso" class="form-control">
-                                    <option value="Adm">Administrador</option>
-                                    <option value="Funcionario">Funcionário</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="cargo">Cargo:</label>
-                            <div class="col-md-4">
-                                <input id="rua" name="cliente.Cargo" type="text" placeholder="Digite aqui o cargo.." class="form-control input-md">
-                            </div>
-                        </div>
 
                         <!-- Password input-->
                         <div class="form-group">
@@ -286,7 +267,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="senhaSistema2">Digite a senha novamente:</label>
                             <div class="col-md-4">
-                                <input id="senhaSistema2" name="repetindoASenha" type="password" placeholder="Digite a senha.." class="form-control input-md">
+                                <input id="senhaSistema2" name="repetindoSenha" type="password" placeholder="Digite a senha.." class="form-control input-md">
 
                             </div>
                         </div>
