@@ -49,7 +49,7 @@ namespace Softness.Controllers
             }
         }
 
-        [ValidateAntiForgeryToken] // Valida o Token do form
+        //[ValidateAntiForgeryToken] // Valida o Token do form
         public ActionResult AdicionaFuncionario(Funcionario funcionario, string repetindoASenha)
         {
             FuncionarioDAO dao = new FuncionarioDAO();

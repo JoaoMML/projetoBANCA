@@ -19,6 +19,7 @@ namespace Softness.App_Start
                 "~/Content/Template/bower_components/fastclick/lib/fastclick.js",
                 "~/Content/Template/dist/js/adminlte.min.js",
                 "~/Content/Template/plugins/JqueryMask/jquery.mask.min.js",
+                "~/Content/Template/plugins/JqueryValidate/Validate.js",
                 "~/Content/Template/dist/js/demo.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css")

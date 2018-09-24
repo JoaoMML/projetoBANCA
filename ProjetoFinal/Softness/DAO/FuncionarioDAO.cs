@@ -42,6 +42,13 @@ namespace Softness.DAO
                 contexto.SaveChanges();
             }
         }
+        public void Remover(Funcionario funcionario)
+        {
+            using (var context = new SoftnessContext()) { 
+            context.Funcionarios.Remove(funcionario);
+            context.SaveChanges();
+            }
+        }
 
         public Funcionario Busca(string login, string senha)
         {

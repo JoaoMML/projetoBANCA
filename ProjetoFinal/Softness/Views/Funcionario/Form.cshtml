@@ -28,8 +28,9 @@
             </div>
         </div>
         <div class="box-body">
-            <form class="form-horizontal" action="/Funcionario/AdicionaFuncionario" method="post">
-                @Html.AntiForgeryToken()
+
+            <form id="meuform" class="form-horizontal" action="/Funcionario/AdicionaFuncionario" method="post">
+                @*@Html.AntiForgeryToken()*@
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -250,7 +251,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="nome">Nome Usuário:</label>
                             <div class="col-md-3">
-                                <input id="nome" name="funcionario.NomeDeUsuario" type="text" placeholder="Digite aqui o nome.." class="form-control input-md">
+                                <input id="usuario" name="funcionario.NomeDeUsuario" type="text" placeholder="Digite aqui o nome.." class="form-control input-md">
 
                             </div>
                         </div>
@@ -270,7 +271,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="cargo">Cargo:</label>
                             <div class="col-md-4">
-                                <input id="rua" name="funcionario.Cargo" type="text" placeholder="Digite aqui o cargo.." class="form-control input-md">
+                                <input id="cargo" name="funcionario.Cargo" type="text" placeholder="Digite aqui o cargo.." class="form-control input-md">
                             </div>
                         </div>
 

@@ -43,6 +43,15 @@ namespace Softness.DAO
             }
         }
 
+        public void Remover(Cliente cliente)
+        {
+            using (var context = new SoftnessContext())
+            {
+                context.Clientes.Remove(cliente);
+                context.SaveChanges();
+            }
+        }
+
         public Funcionario Busca(string login, string senha)
         {
             using (var contexto = new SoftnessContext())

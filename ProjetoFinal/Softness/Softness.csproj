@@ -6612,6 +6612,7 @@
     <Content Include="Content\Template\plugins\JqueryMask\jquery.mask.min.js" />
     <Content Include="Content\Template\plugins\jQueryUI\jquery-ui.js" />
     <Content Include="Content\Template\plugins\jQueryUI\jquery-ui.min.js" />
+    <Content Include="Content\Template\plugins\JqueryValidate\Validate.js" />
     <Content Include="Content\Template\plugins\jvectormap\jquery-jvectormap-1.2.2.css" />
     <Content Include="Content\Template\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
     <Content Include="Content\Template\plugins\jvectormap\jquery-jvectormap-usa-en.js" />
@@ -6637,6 +6638,7 @@
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
+    <Compile Include="DAO\TreinosDAO.cs" />
     <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -6666,6 +6668,8 @@
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Plano.cs" />
+    <Compile Include="Models\Treino.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
