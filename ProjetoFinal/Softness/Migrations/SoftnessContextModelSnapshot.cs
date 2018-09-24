@@ -121,6 +121,52 @@ namespace Softness.Migrations
                     b.ToTable("Pessoas");
                 });
 
+            modelBuilder.Entity("Softness.Models.Treino", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Carga");
+
+                    b.Property<string>("Exercicios");
+
+                    b.Property<string>("Intervalo");
+
+                    b.Property<string>("Observacoes");
+
+                    b.Property<string>("Repeticoes");
+
+                    b.Property<string>("Series");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Treinos");
+                });
+
+            modelBuilder.Entity("Softness.Models.TreinoCliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ClienteId");
+
+                    b.Property<string>("TipoTreino")
+                        .IsRequired()
+                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)));
+
+                    b.Property<int>("TreinoId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("TreinoId");
+
+                    b.ToTable("TreinoClientes");
+                });
+
             modelBuilder.Entity("Softness.Models.Cliente", b =>
                 {
                     b.HasOne("Softness.Models.Pessoa", "Pessoa")
@@ -140,6 +186,19 @@ namespace Softness.Migrations
                     b.HasOne("Softness.Models.Endereco", "Endereco")
                         .WithMany()
                         .HasForeignKey("EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Softness.Models.TreinoCliente", b =>
+                {
+                    b.HasOne("Softness.Models.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Softness.Models.Treino", "Treino")
+                        .WithMany()
+                        .HasForeignKey("TreinoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -6663,6 +6663,14 @@
     <Compile Include="Migrations\20180923002337_ClientesADD.designer.cs">
       <DependentUpon>20180923002337_ClientesADD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180924195748_Treinos.cs" />
+    <Compile Include="Migrations\20180924195748_Treinos.designer.cs">
+      <DependentUpon>20180924195748_Treinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180924203033_TreinoCliente.cs" />
+    <Compile Include="Migrations\20180924203033_TreinoCliente.designer.cs">
+      <DependentUpon>20180924203033_TreinoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
@@ -6670,6 +6678,7 @@
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Plano.cs" />
     <Compile Include="Models\Treino.cs" />
+    <Compile Include="Models\TreinoCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

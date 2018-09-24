@@ -14,6 +14,7 @@ namespace Softness.DAO
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Treino> Treinos { get; set; }
+        public DbSet<TreinoCliente> TreinoClientes { get; set; }
 
 
 
