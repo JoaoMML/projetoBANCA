@@ -1,4 +1,5 @@
 ﻿using Softness.DAO;
+using Softness.Filtros;
 using Softness.Models;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Softness.Controllers
 {
+    
     public class FuncionarioController : Controller
     {
         // GET: Usuario
@@ -17,6 +19,7 @@ namespace Softness.Controllers
         }
 
         // [Route("/nomeDarotapersonalizada")]  
+        [AutorizacaoFilter]
         public ActionResult Form()
         {
             ViewBag.Funcionario = new Funcionario();
@@ -26,6 +29,7 @@ namespace Softness.Controllers
             return View();
         }
 
+        [AutorizacaoFilter]
         public ActionResult Tabela()
         {
             FuncionarioDAO dao = new FuncionarioDAO();
@@ -62,6 +66,12 @@ namespace Softness.Controllers
             {
                 return RedirectToAction("Form");
             }
+        }
+
+        public ActionResult LogOut()
+        {
+            Session.Abandon();
+            return Json(new { saiDaSessao = true });
         }
     }
 }

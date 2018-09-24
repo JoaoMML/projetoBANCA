@@ -5,12 +5,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Softness.DAO;
+using Softness.Filtros;
 
 namespace Softness.Controllers
 {
     public class ClienteController : Controller
     {
         // GET: Cliente
+        [AutorizacaoFilter]
         public ActionResult Form()
         {
             ViewBag.Funcionario = new Cliente();
@@ -20,7 +22,7 @@ namespace Softness.Controllers
             return View();
         }
 
-
+        [AutorizacaoFilter]
         public ActionResult AdicionaCliente(Cliente cliente, string repetindoSenha)
         {
             ClienteDAO dao = new ClienteDAO();

@@ -93,6 +93,7 @@
                     <label class="col-md-4 control-label" for="estadoCivil">Estado Civil:</label>
                     <div class="col-md-2">
                         <select id="estadoCivil" name="funcionario.pessoa.EstadoCivil" class="form-control">
+                            <option>Selecione..</option>
                             <option value="Solteiro">Solteiro(a)</option>
                             <option value="Casado">Casado(a)</option>
                             <option value="Separado">Separado(a)</option>
@@ -193,6 +194,7 @@
                             <label class="col-md-4 control-label" for="estado">Estado</label>
                             <div class="col-md-4">
                                 <select id="estado" name="funcionario.pessoa.endereco.Estado" class="form-control">
+                                    <option>Selecione..</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
                                     <option value="AP">AP</option>
@@ -260,7 +262,8 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="tipoDeAcesso">Tipo de Acesso:</label>
                             <div class="col-md-4">
-                                <select id="tipoDeAcesso" name="funcionario.TipoDeAcesso" class="form-control">
+                                <select id="tipoDeAcesso" name="funcionario.TipoDeAcesso" class="form-control" required>
+                                    <option>Selecione</option>
                                     <option value="Adm">Administrador</option>
                                     <option value="Funcionario">Funcionário</option>
                                 </select>
