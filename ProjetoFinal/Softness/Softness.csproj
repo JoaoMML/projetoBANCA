@@ -6635,6 +6635,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
+    <Compile Include="Controllers\TreinoController.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
@@ -7296,6 +7297,7 @@
     <Content Include="Views\Funcionario\Form.cshtml" />
     <Content Include="Views\Funcionario\Tabela.cshtml" />
     <Content Include="Views\Cliente\Form.cshtml" />
+    <Content Include="Views\Treino\NovoTreino.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
