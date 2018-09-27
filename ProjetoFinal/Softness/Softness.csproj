@@ -191,6 +191,7 @@
     <Content Include="Content\telaLogin\fundo.jpg" />
     <Content Include="Content\telaLogin\jquery.min.js" />
     <Content Include="Content\telaLogin\Style.css" />
+    <Content Include="Content\telaLogin\teste.jpg" />
     <Content Include="Content\telaLogin\trab.jpg" />
     <Content Include="Content\telaLogin\wp2631573.jpg" />
     <Content Include="Content\Template\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
