@@ -11,6 +11,7 @@ namespace Softness.Models
         public Pessoa Pessoa { get; set; }
         public string NomeUsuario { get; set; }
         public string Senha { get; set; }
+        
         // Objetivo {}
     }
 }
