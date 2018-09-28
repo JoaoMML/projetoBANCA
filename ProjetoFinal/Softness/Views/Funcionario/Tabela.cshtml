@@ -18,7 +18,8 @@
             <table class="table table-striped table-condensed table-hover dataTable">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>Funcionário</th>
+                        <th>CPF</th>
                         <th>Nome de Usuario</th>
                         <th>Tipo de Acesso</th>
                         <th>Cargo</th>
@@ -28,7 +29,8 @@
                     @foreach (var funcionario in ViewBag.Funcionarios)
                     {
                         <tr>
-                            <td>@funcionario.Id</td>
+                            <td>@funcionario.Pessoa.Nome</td>
+                            <td>@funcionario.Pessoa.Cpf</td>
                             <td>@funcionario.NomeDeUsuario</td>
                             <td>@funcionario.TipoDeAcesso</td>
                             <td>@funcionario.Cargo</td>

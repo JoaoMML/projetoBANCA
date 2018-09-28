@@ -22,7 +22,7 @@ namespace Softness.DAO
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Funcionarios.ToList();
+                return contexto.Funcionarios.Include("Pessoa").ToList();
             }
         }
 

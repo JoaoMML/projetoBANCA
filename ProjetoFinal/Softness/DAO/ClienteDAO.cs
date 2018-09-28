@@ -22,8 +22,7 @@ namespace Softness.DAO
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Clientes.ToList();
-                //return contexto.Clientes.Include("Pessoa").ToList();
+                return contexto.Clientes.Include("Pessoa").ToList();
             }
         }
 
@@ -53,11 +52,11 @@ namespace Softness.DAO
             }
         }
 
-        public Funcionario Busca(string login, string senha)
+        public Cliente Busca(string login, string senha)
         {
-            using (var contexto = new SoftnessContext())
+            using (var soft = new SoftnessContext())
             {
-                return contexto.Funcionarios.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeDeUsuario == login && f.Senha == senha);
+                return soft.Clientes.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeUsuario == login && f.Senha == senha);
             }
         }
     }

@@ -6645,6 +6645,7 @@
     <Compile Include="DAO\SoftnessContext.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\TreinosDAO.cs" />
+    <Compile Include="Filtros\AutorizacaoClienteFilterAttribute.cs" />
     <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -7310,6 +7311,9 @@
     <Content Include="Views\Funcionario\Tabela.cshtml" />
     <Content Include="Views\Cliente\Form.cshtml" />
     <Content Include="Views\Treino\NovoTreino.cshtml" />
+    <Content Include="Views\Cliente\Tabela.cshtml" />
+    <Content Include="Views\Cliente\Login.cshtml" />
+    <Content Include="Views\Home\HomeCliente.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -13,12 +13,24 @@ namespace Softness.Controllers
     {
         // GET: Cliente
         //[AutorizacaoFilter]
+        public ActionResult Login()
+        {
+            return View();
+        }
         public ActionResult Form()
         {
-            ViewBag.Funcionario = new Cliente();
-            ViewBag.Funcionario.Pessoa = new Pessoa();
-            ViewBag.Funcionario.Pessoa.Endereco = new Endereco();
+            ViewBag.Cliente = new Cliente();
+            ViewBag.Cliente.Pessoa = new Pessoa();
+            ViewBag.Cliente.Pessoa.Endereco = new Endereco();
 
+            return View();
+        }
+
+         public ActionResult Tabela()
+        {
+            ClienteDAO dao = new ClienteDAO();
+            IList<Cliente> clientes = dao.Lista();
+            ViewBag.Clientes = clientes;
             return View();
         }
 
@@ -33,6 +45,21 @@ namespace Softness.Controllers
             } else
             {
                 return RedirectToAction ("Form");
+            }
+        }
+
+        public ActionResult Autentica(String nomeusuario, String senha)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            Cliente cliente = dao.Busca(nomeusuario, senha);
+            if (cliente != null)
+            {
+                Session["clienteLogado"] = cliente;
+                return RedirectToAction("HomeCliente", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Cliente");
             }
         }
     }

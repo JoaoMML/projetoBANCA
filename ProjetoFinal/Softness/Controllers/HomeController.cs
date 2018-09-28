@@ -15,5 +15,10 @@ namespace Softness.Controllers
         {
             return View();
         }
+
+        public ActionResult HomeCliente()
+        {
+            return View();
+        }
     }
 }
