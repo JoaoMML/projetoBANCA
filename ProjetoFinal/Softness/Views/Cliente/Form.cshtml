@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="box-body">
-            <form class="form-horizontal" action="/Cliente/AdicionaCliente" method="post">
+            <form id="meuform" class="form-horizontal" action="/Cliente/AdicionaCliente" method="post">
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -91,6 +91,7 @@
                     <label class="col-md-4 control-label" for="estadoCivil">Estado Civil:</label>
                     <div class="col-md-2">
                         <select id="estadoCivil" name="cliente.pessoa.EstadoCivil" class="form-control">
+                            <option value=""></option>
                             <option value="Solteiro">Solteiro(a)</option>
                             <option value="Casado">Casado(a)</option>
                             <option value="Separado">Separado(a)</option>
@@ -143,6 +144,15 @@
 
                         <!-- Text input-->
                         <div class="form-group">
+                            <label class="col-md-4 control-label" for="cep">Cep:</label>
+                            <div class="col-md-4">
+                                <input id="cep" name="cliente.pessoa.endereco.Cep" type="text" placeholder="Informe o cep.." class="form-control input-md">
+                                <span class="help-block">*apenas números*</span>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
                             <label class="col-md-4 control-label" for="rua">Rua:</label>
                             <div class="col-md-4">
                                 <input id="rua" name="cliente.pessoa.endereco.Rua" type="text" placeholder="Digite aqui a rua.." class="form-control input-md">
@@ -191,6 +201,7 @@
                             <label class="col-md-4 control-label" for="estado">Estado</label>
                             <div class="col-md-4">
                                 <select id="estado" name="cliente.pessoa.endereco.Estado" class="form-control">
+                                    <option value=""></option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
                                     <option value="AP">AP</option>
@@ -222,14 +233,7 @@
                             </div>
                         </div>
 
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="cep">Cep:</label>
-                            <div class="col-md-4">
-                                <input id="cep" name="cliente.pessoa.endereco.Cep" type="text" placeholder="Informe o cep.." class="form-control input-md">
-                                <span class="help-block">*apenas números*</span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -249,7 +253,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="nome">Nome Usuário:</label>
                             <div class="col-md-3">
-                                <input id="user" name="cliente.NomeUsuario" type="text" placeholder="Digite aqui o nome.." class="form-control input-md">
+                                <input id="user" name="cliente.NomeUsuario" type="text" placeholder="Digite aqui o usuario.." class="form-control input-md">
 
                             </div>
                         </div>
@@ -293,5 +297,5 @@
 </section>
 
 @section Index_scripts{
-    <script src="~/Content/Template/plugins/Validation/Funcionario.js"></script>
+    <script src="~/Content/Template/plugins/Validation/Cliente.js"></script>
 }

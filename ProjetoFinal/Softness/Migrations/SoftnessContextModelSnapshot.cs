@@ -19,6 +19,21 @@ namespace Softness.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Softness.Models.CategoriaDoProduto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categorias");
+                });
+
             modelBuilder.Entity("Softness.Models.Cliente", b =>
                 {
                     b.Property<int>("Id")
@@ -61,6 +76,29 @@ namespace Softness.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Enderecos");
+                });
+
+            modelBuilder.Entity("Softness.Models.FichaTreino", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataInicio");
+
+                    b.Property<string>("Frequencia");
+
+                    b.Property<string>("NomeFicha");
+
+                    b.Property<string>("Observacoes");
+
+                    b.Property<string>("Professor");
+
+                    b.Property<string>("TipoDuração");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FichaTreinos");
                 });
 
             modelBuilder.Entity("Softness.Models.Funcionario", b =>
@@ -119,6 +157,29 @@ namespace Softness.Migrations
                     b.HasIndex("EnderecoId");
 
                     b.ToTable("Pessoas");
+                });
+
+            modelBuilder.Entity("Softness.Models.Produto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CategoriaId");
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<string>("Nome");
+
+                    b.Property<float>("Preco");
+
+                    b.Property<int>("Quantidade");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.ToTable("Produtos");
                 });
 
             modelBuilder.Entity("Softness.Models.Treino", b =>
@@ -187,6 +248,13 @@ namespace Softness.Migrations
                         .WithMany()
                         .HasForeignKey("EnderecoId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Softness.Models.Produto", b =>
+                {
+                    b.HasOne("Softness.Models.CategoriaDoProduto", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId");
                 });
 
             modelBuilder.Entity("Softness.Models.TreinoCliente", b =>

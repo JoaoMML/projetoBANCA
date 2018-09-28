@@ -93,7 +93,7 @@
                     <label class="col-md-4 control-label" for="estadoCivil">Estado Civil:</label>
                     <div class="col-md-2">
                         <select id="estadoCivil" name="funcionario.pessoa.EstadoCivil" class="form-control">
-                            <option>Selecione..</option>
+                            <option value=""></option>
                             <option value="Solteiro">Solteiro(a)</option>
                             <option value="Casado">Casado(a)</option>
                             <option value="Separado">Separado(a)</option>
@@ -143,6 +143,14 @@
                         </div>
                     </div>
                     <div class="box-body">
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="cep">Cep:</label>
+                            <div class="col-md-4">
+                                <input id="cep" name="funcionario.pessoa.endereco.Cep" type="text" placeholder="Informe o cep.." class="form-control input-md">
+                                <span class="help-block">*apenas números*</span>
+                            </div>
+                        </div>
 
                         <!-- Text input-->
                         <div class="form-group">
@@ -194,7 +202,7 @@
                             <label class="col-md-4 control-label" for="estado">Estado</label>
                             <div class="col-md-4">
                                 <select id="estado" name="funcionario.pessoa.endereco.Estado" class="form-control">
-                                    <option>Selecione..</option>
+                                    <option value=""></option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
                                     <option value="AP">AP</option>
@@ -227,13 +235,7 @@
                         </div>
 
                         <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="cep">Cep:</label>
-                            <div class="col-md-4">
-                                <input id="cep" name="funcionario.pessoa.endereco.Cep" type="text" placeholder="Informe o cep.." class="form-control input-md">
-                                <span class="help-block">*apenas números*</span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -308,7 +310,7 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-            
+
         </div>
         <!-- /.box-footer-->
     </div>

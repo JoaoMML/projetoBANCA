@@ -6626,6 +6626,7 @@
     <Content Include="Content\Template\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Content\Template\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Content\Template\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Content\Template\plugins\Validation\Cliente.js" />
     <Content Include="Content\Template\plugins\Validation\Funcionario.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -6637,7 +6638,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\TreinoController.cs" />
+    <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\FichaTreinoDAO.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\TreinosDAO.cs" />
@@ -6673,12 +6677,19 @@
     <Compile Include="Migrations\20180924203033_TreinoCliente.designer.cs">
       <DependentUpon>20180924203033_TreinoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180928062128_fichaEprodutos.cs" />
+    <Compile Include="Migrations\20180928062128_fichaEprodutos.designer.cs">
+      <DependentUpon>20180928062128_fichaEprodutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
+    <Compile Include="Models\CategoriaDoProduto.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\FichaTreino.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Plano.cs" />
+    <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Treino.cs" />
     <Compile Include="Models\TreinoCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
