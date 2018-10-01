@@ -29,6 +29,7 @@ namespace Softness.Controllers
             return View();
         }
 
+
         [AutorizacaoFilter]
         public ActionResult Tabela()
         {

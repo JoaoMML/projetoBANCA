@@ -14,8 +14,11 @@
     <div class="box">
         <div class="box-header with-border">
 
+            <div class="pull-right fa-border ">
+                <a type="button" href="/Cliente/Form" name="cadastrar" class="btn btn-success">Novo</a>
+            </div>
 
-            <table id="toolbarModifierWrapper" class="table table-striped table-condensed table-hover dataTables_wrapper">
+            <table id="tabela" class="table table-striped table-condensed table-hover dataTables_wrapper">
                 <thead>
                     <tr>
                         <th>Matricula</th>
@@ -38,6 +41,12 @@
                             <td>@cliente.Pessoa.Email</td>
                             <td>@cliente.Pessoa.Fone</td>
                             <td>@cliente.NomeUsuario</td>
+                            <td>
+                                <div class="pull-right fa-border ">
+                                    <a type="button" href="/Cliente/Form" name="cadastrar" class="btn bg-blue">Editar</a>
+                                    <a type="button" href="/Cliente/Form" name="cadastrar" class="btn btn-google">Excluir</a>
+                                </div>
+                            </td>
                         </tr>
                     }
                 </tbody>
@@ -46,3 +55,8 @@
     </div>
 
 </section>
+
+@section Index_scripts{
+    <script src="~/Content/Template/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    @*<script src="~/Content/Template/plugins/Manipulando/Functions.js"></script>*@
+}

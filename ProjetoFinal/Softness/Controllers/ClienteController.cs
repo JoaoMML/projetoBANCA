@@ -17,6 +17,12 @@ namespace Softness.Controllers
         {
             return View();
         }
+
+        public ActionResult Home()
+        {
+            return View();
+        }
+
         public ActionResult Form()
         {
             ViewBag.Cliente = new Cliente();
@@ -26,7 +32,7 @@ namespace Softness.Controllers
             return View();
         }
 
-         public ActionResult Tabela()
+        public ActionResult Tabela()
         {
             ClienteDAO dao = new ClienteDAO();
             IList<Cliente> clientes = dao.Lista();
@@ -55,12 +61,14 @@ namespace Softness.Controllers
             if (cliente != null)
             {
                 Session["clienteLogado"] = cliente;
-                return RedirectToAction("HomeCliente", "Home");
+                return RedirectToAction("Home", "Cliente");
             }
             else
             {
                 return RedirectToAction("Login", "Cliente");
             }
+            
         }
+
     }
 }

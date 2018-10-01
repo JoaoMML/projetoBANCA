@@ -193,6 +193,7 @@
     <Content Include="Content\telaLogin\Style.css" />
     <Content Include="Content\telaLogin\teste.jpg" />
     <Content Include="Content\telaLogin\trab.jpg" />
+    <Content Include="Content\telaLogin\Treino.jpg" />
     <Content Include="Content\telaLogin\wp2631573.jpg" />
     <Content Include="Content\Template\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Content\Template\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
@@ -6618,6 +6619,7 @@
     <Content Include="Content\Template\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
     <Content Include="Content\Template\plugins\jvectormap\jquery-jvectormap-usa-en.js" />
     <Content Include="Content\Template\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Content\Template\plugins\Manipulando\Functions.js" />
     <Content Include="Content\Template\plugins\pace\pace.css" />
     <Content Include="Content\Template\plugins\pace\pace.js" />
     <Content Include="Content\Template\plugins\pace\pace.min.css" />
@@ -6635,6 +6637,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\FichaTreinoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\TreinoController.cs" />
@@ -7313,7 +7316,8 @@
     <Content Include="Views\Treino\NovoTreino.cshtml" />
     <Content Include="Views\Cliente\Tabela.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
-    <Content Include="Views\Home\HomeCliente.cshtml" />
+    <Content Include="Views\FichaTreino\FichaTreino.cshtml" />
+    <Content Include="Views\Cliente\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
