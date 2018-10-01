@@ -18,36 +18,30 @@ namespace Softness.DAO
             }
         }
 
-        public IList<Cliente> Lista()
-        {
-            using (var contexto = new SoftnessContext())
-            {
-                return contexto.Clientes.Include("Pessoa").ToList();
-            }
-        }
-
         public Cliente BuscaPorId(int id)
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Clientes.Find(id);
+                return contexto.Clientes.Include(p => p.Pessoa).ThenInclude(e => e.Endereco).Where(i => i.Id == id).FirstOrDefault();
             }
         }
 
-        public void Atualiza(Cliente Clientes)
+        public void Atualiza(Cliente cliente)
         {
             using (var contexto = new SoftnessContext())
             {
-                contexto.Entry(Clientes).State = EntityState.Modified;
+                contexto.Clientes.Update(cliente);
                 contexto.SaveChanges();
             }
         }
 
-        public void Remover(Cliente cliente)
+        public void Remover(int id)
         {
             using (var context = new SoftnessContext())
             {
-                context.Clientes.Remove(cliente);
+                var cliente = new ClienteDAO().BuscaPorId(id);
+                cliente.Ativo = false;
+                context.Entry(cliente).State = EntityState.Modified;
                 context.SaveChanges();
             }
         }
@@ -57,6 +51,14 @@ namespace Softness.DAO
             using (var soft = new SoftnessContext())
             {
                 return soft.Clientes.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeUsuario == login && f.Senha == senha);
+            }
+        }
+
+        public IList<Cliente> ListaClientes()
+        {
+            using (var contexto = new SoftnessContext())
+            {
+                return contexto.Clientes.Include(c => c.Pessoa).Where(a => a.Ativo == true).ToList();
             }
         }
     }

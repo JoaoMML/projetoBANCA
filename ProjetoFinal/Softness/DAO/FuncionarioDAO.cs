@@ -18,14 +18,6 @@ namespace Softness.DAO
             }
         }
 
-        public IList<Funcionario> Lista()
-        {
-            using (var contexto = new SoftnessContext())
-            {
-                return contexto.Funcionarios.Include("Pessoa").ToList();
-            }
-        }
-
         public Funcionario BuscaPorId(int id)
         {
             using (var contexto = new SoftnessContext())
@@ -55,6 +47,14 @@ namespace Softness.DAO
             using (var contexto = new SoftnessContext())
             {
                 return contexto.Funcionarios.Include(f => f.Pessoa).FirstOrDefault(f => f.NomeDeUsuario == login && f.Senha == senha);
+            }
+        }
+
+        public IList<Funcionario> ListaFuncionarios()
+        {
+            using (var contexto = new SoftnessContext())
+            {
+                return contexto.Funcionarios.Include(c => c.Pessoa).ToList();
             }
         }
     }

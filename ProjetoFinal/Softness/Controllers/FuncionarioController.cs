@@ -33,9 +33,6 @@ namespace Softness.Controllers
         [AutorizacaoFilter]
         public ActionResult Tabela()
         {
-            FuncionarioDAO dao = new FuncionarioDAO();
-            IList<Funcionario> funcionarios = dao.Lista();
-            ViewBag.Funcionarios = funcionarios;
             return View();
         }
 
@@ -74,5 +71,14 @@ namespace Softness.Controllers
             Session.Abandon();
             return Json(new { saiDaSessao = true });
         }
+
+        public JsonResult ListaFuncionarios()
+        {
+            return Json(new
+            {
+                data = new FuncionarioDAO().ListaFuncionarios()
+            }, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

@@ -23,6 +23,13 @@ namespace Softness.Controllers
             return View();
         }
 
+        public ActionResult EditaCliente(int id)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            ViewBag.Cliente = dao.BuscaPorId(id);
+            return View();
+        }
+  
         public ActionResult Form()
         {
             ViewBag.Cliente = new Cliente();
@@ -34,23 +41,22 @@ namespace Softness.Controllers
 
         public ActionResult Tabela()
         {
-            ClienteDAO dao = new ClienteDAO();
-            IList<Cliente> clientes = dao.Lista();
-            ViewBag.Clientes = clientes;
             return View();
         }
 
-        
+
         public ActionResult AdicionaCliente(Cliente cliente, string repetindoSenha)
         {
             ClienteDAO dao = new ClienteDAO();
-            if( cliente!=null && repetindoSenha == cliente.Senha)
+            if (cliente != null && repetindoSenha == cliente.Senha)
             {
+                cliente.Ativo = true;
                 dao.Adiciona(cliente);
-                return RedirectToAction ("Index","Home");
-            } else
+                return RedirectToAction("Tabela", "Cliente");
+            }
+            else
             {
-                return RedirectToAction ("Form");
+                return RedirectToAction("Form");
             }
         }
 
@@ -67,7 +73,38 @@ namespace Softness.Controllers
             {
                 return RedirectToAction("Login", "Cliente");
             }
-            
+
+        }
+        public JsonResult ListaClientes()
+        {
+            return Json(new
+                {
+                data = new ClienteDAO().ListaClientes()
+                }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult AtualizaCliente(Cliente cliente, string repetindoSenha)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            if (cliente != null && repetindoSenha == cliente.Senha)
+            {
+                cliente.Ativo = true;
+                dao.Atualiza(cliente);
+                return RedirectToAction("Tabela", "Cliente");
+            }
+            else
+            {
+                ViewBag.Pessoa = cliente;
+                return View("EditaCliente");
+            }
+        }
+
+        public JsonResult ExcluirCliente(int id)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            dao.Remover(id);
+
+            return Json(new { excluiu = true }, JsonRequestBehavior.AllowGet);
         }
 
     }

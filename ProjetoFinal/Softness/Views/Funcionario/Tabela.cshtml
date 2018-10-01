@@ -1,6 +1,6 @@
 ﻿<section class="content-header">
     <h1>
-        Tabela de Usuários
+        Tabela de Funcionarios
         <small> - </small>
     </h1>
     <ol class="breadcrumb">
@@ -21,7 +21,7 @@
             </div>
 
 
-            <table class="table table-striped table-condensed table-hover dataTable">
+            <table id="tabelaFuncionario" class="table table-striped table-condensed table-hover dataTable">
                 <thead>
                     <tr>
                         <th>Funcionário</th>
@@ -29,28 +29,49 @@
                         <th>Nome de Usuario</th>
                         <th>Tipo de Acesso</th>
                         <th>Cargo</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
-                <tbody>
-                    @foreach (var funcionario in ViewBag.Funcionarios)
-                    {
-                        <tr>
-                            <td>@funcionario.Pessoa.Nome</td>
-                            <td>@funcionario.Pessoa.Cpf</td>
-                            <td>@funcionario.NomeDeUsuario</td>
-                            <td>@funcionario.TipoDeAcesso</td>
-                            <td>@funcionario.Cargo</td>
-                            <td>
-                                <div class="tools">
-                                    <i class="fa fa-edit"></i>
-                                    <i class="fa fa-trash-o"></i>
-                                </div>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
+
             </table>
         </div>
-        </div>
+    </div>
 
 </section>
+
+@section Index_scripts{
+
+    <script type="text/javascript">
+
+                $(document).ready(function () {
+            var tabela = $('#tabelaFuncionario').DataTable({
+                dom: 'Blftip',
+                select: true,
+                "ajax": {
+                    "url": "/Funcionario/ListaFuncionarios",
+                    "type": "GET",
+                    "datatype": "json",
+                },
+                "columns": [
+
+                    { "data": "Pessoa.Nome", "autoWidth": true },
+                    { "data": "Pessoa.Cpf", "autoWidth": true },
+                    { "data": "NomeDeUsuario", "autoWidth": true },
+                    { "data": "TipoDeAcesso", "autoWidth": true },
+                    { "data": "Cargo", "autoWidth": true },
+                    { "data": "Pessoa.Fone", "autoWidth": true },
+                    { "data": "Pessoa.Email", "autoWidth": true },
+
+                ]
+            });
+
+                $('#tabelaFuncionario').click(function () {
+                var ClienteId = tabela.rows({ selected: true }).data()[0].Pessoa.Nome;
+               console.log(ClienteId);
+                //window.location.href = "/Cliente/EditaCliente/" + ClienteId
+            });
+        });
+    </script>
+
+}

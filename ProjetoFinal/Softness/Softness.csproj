@@ -184,6 +184,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\DataTable\datatables.min.css" />
+    <Content Include="Content\DataTable\datatables.min.js" />
+    <Content Include="Content\DataTable\dataTables.select.min.js" />
+    <Content Include="Content\DataTable\select.dataTables.min.css" />
     <Content Include="Content\telaLogin\BackgroundTelaLogin.png" />
     <Content Include="Content\telaLogin\bootstrap.min.css" />
     <Content Include="Content\telaLogin\bootstrap.min.js" />
@@ -6685,6 +6689,10 @@
     <Compile Include="Migrations\20180928062128_fichaEprodutos.designer.cs">
       <DependentUpon>20180928062128_fichaEprodutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20181001195546_ClienteAtivo.cs" />
+    <Compile Include="Migrations\20181001195546_ClienteAtivo.designer.cs">
+      <DependentUpon>20181001195546_ClienteAtivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\CategoriaDoProduto.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -7316,8 +7324,9 @@
     <Content Include="Views\Treino\NovoTreino.cshtml" />
     <Content Include="Views\Cliente\Tabela.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
-    <Content Include="Views\FichaTreino\FichaTreino.cshtml" />
     <Content Include="Views\Cliente\Home.cshtml" />
+    <Content Include="Views\FichaTreino\Nova.cshtml" />
+    <Content Include="Views\Cliente\EditaCliente.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

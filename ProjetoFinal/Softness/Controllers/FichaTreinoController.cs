@@ -10,7 +10,7 @@ namespace Softness.Controllers
 {
     public class FichaTreinoController : Controller
     {
-        public ActionResult FichaTreino()
+        public ActionResult Nova()
         {
             ViewBag.FichaTreino = new FichaTreino();
  
@@ -27,7 +27,7 @@ namespace Softness.Controllers
             }
             else
             {
-                return RedirectToAction("FichaTreino");
+                return RedirectToAction("Nova");
             }
         }
     }

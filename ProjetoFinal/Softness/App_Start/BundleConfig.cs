@@ -12,7 +12,6 @@ namespace Softness.App_Start
         {
             bundles.Add(new ScriptBundle("~/bundles/js")
                 .Include(
-              //  "~/Content/Template/bower_components/jquery/dist/jquery.min.js",
                 "~/Content/Template/bower_components/jquery/dist/jquery-3.3.1.js",
                 "~/Content/Template/bower_components/bootstrap/dist/js/bootstrap.min.js",
                 "~/Content/Template/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
@@ -20,6 +19,8 @@ namespace Softness.App_Start
                 "~/Content/Template/dist/js/adminlte.min.js",
                 "~/Content/Template/plugins/JqueryMask/jquery.mask.min.js",
                 "~/Content/Template/plugins/JqueryValidate/Validate.js",
+                "~/Content/DataTable/datatables.min.js",
+                "~/Content/DataTable/dataTables.select.min.js",
                 "~/Content/Template/dist/js/demo.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css")
@@ -29,6 +30,8 @@ namespace Softness.App_Start
                  "~/Content/Template/bower_components/font-awesome/css/font-awesome.min.css",
                 "~/Content/Template/bower_components/Ionicons/css/ionicons.min.css",
                 "~/Content/Template/dist/css/AdminLTE.min.css",
+                "~/Content/DataTable/datatables.min.css",
+                "~/Content/DataTable/select.dataTables.min.css",
                 "~/Content/Template/dist/css/skins/_all-skins.min.css"));
 
 
