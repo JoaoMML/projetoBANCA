@@ -19,7 +19,7 @@ namespace Softness.Controllers
         }
 
         // [Route("/nomeDarotapersonalizada")]  
-        [AutorizacaoFilter]
+        //[AutorizacaoFilter]
         public ActionResult Form()
         {
             ViewBag.Funcionario = new Funcionario();
@@ -29,8 +29,15 @@ namespace Softness.Controllers
             return View();
         }
 
+        public ActionResult EditaFuncionario(int id)
+        {
+            FuncionarioDAO dao = new FuncionarioDAO();
+            ViewBag.Funcionario = dao.BuscaPorId(id);
+            return View();
+        }
 
-        [AutorizacaoFilter]
+
+        //[AutorizacaoFilter]
         public ActionResult Tabela()
         {
             return View();
@@ -57,6 +64,7 @@ namespace Softness.Controllers
             FuncionarioDAO dao = new FuncionarioDAO();
             if(funcionario != null && repetindoASenha == funcionario.Senha)
             {
+                funcionario.Ativo = true;
                 dao.Adiciona(funcionario);
                 return RedirectToAction("Index", "Home");
             }
@@ -72,6 +80,22 @@ namespace Softness.Controllers
             return Json(new { saiDaSessao = true });
         }
 
+        public ActionResult AtualizaFuncionario(Funcionario funcionario, string repetindoASenha)
+        {
+            FuncionarioDAO dao = new FuncionarioDAO();
+            if (funcionario != null && repetindoASenha == funcionario.Senha)
+            {
+                funcionario.Ativo = true;
+                dao.Atualiza(funcionario);
+                return RedirectToAction("Tabela", "Funcionario");
+            }
+            else
+            {
+                ViewBag.Pessoa = funcionario;
+                return View("EditaFuncionario");
+            }
+        }
+
         public JsonResult ListaFuncionarios()
         {
             return Json(new
@@ -80,5 +104,12 @@ namespace Softness.Controllers
             }, JsonRequestBehavior.AllowGet);
         }
 
+        public JsonResult ExcluiFuncionario(int id)
+        {
+            FuncionarioDAO dao = new FuncionarioDAO();
+            dao.Remover(id);
+
+            return Json(new { excluiu = true }, JsonRequestBehavior.AllowGet);
+        }
     }
 }

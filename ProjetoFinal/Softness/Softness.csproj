@@ -6693,6 +6693,10 @@
     <Compile Include="Migrations\20181001195546_ClienteAtivo.designer.cs">
       <DependentUpon>20181001195546_ClienteAtivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20181002181928_SituacaoFuncionario.cs" />
+    <Compile Include="Migrations\20181002181928_SituacaoFuncionario.designer.cs">
+      <DependentUpon>20181002181928_SituacaoFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\CategoriaDoProduto.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -7327,6 +7331,7 @@
     <Content Include="Views\Cliente\Home.cshtml" />
     <Content Include="Views\FichaTreino\Nova.cshtml" />
     <Content Include="Views\Cliente\EditaCliente.cshtml" />
+    <Content Include="Views\Funcionario\EditaFuncionario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

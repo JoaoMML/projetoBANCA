@@ -24,7 +24,7 @@
             },
             "funcionario.pessoa.Email": {
                 required: true,
-                Email: true
+                email: true
 
             },
             "funcionario.pessoa.Fone": {
@@ -103,7 +103,8 @@
 
             },
             "funcionario.pessoa.Email": {
-                required: "Este campo é obrigatório."
+                required: "Este campo é obrigatório.",
+                email: "Email inválido."
 
             },
             "funcionario.pessoa.Fone": {

@@ -13,5 +13,6 @@ namespace Softness.Models
         public string Senha { get; set; }
         public string TipoDeAcesso { get; set; }
         public string Cargo { get; set; }
+        public bool Ativo { get; set; }
     }
 }

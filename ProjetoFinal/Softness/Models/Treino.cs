@@ -23,4 +23,5 @@ namespace Softness.Models
         //public float Altura { get; set; }
         //public float Imc { get; set; }
     }
+   
 }

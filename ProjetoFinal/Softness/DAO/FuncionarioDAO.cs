@@ -17,28 +17,31 @@ namespace Softness.DAO
                 context.SaveChanges();
             }
         }
-
         public Funcionario BuscaPorId(int id)
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Funcionarios.Find(id);
+                return contexto.Funcionarios.Include(p => p.Pessoa).ThenInclude(e => e.Endereco).Where(i => i.Id == id).FirstOrDefault();
             }
         }
 
-        public void Atualiza(Funcionario Funcionarios)
+        public void Atualiza(Funcionario funcionario)
         {
             using (var contexto = new SoftnessContext())
             {
-                contexto.Entry(Funcionarios).State = EntityState.Modified;
+                contexto.Funcionarios.Update(funcionario);
                 contexto.SaveChanges();
             }
         }
-        public void Remover(Funcionario funcionario)
+
+        public void Remover(int id)
         {
-            using (var context = new SoftnessContext()) { 
-            context.Funcionarios.Remove(funcionario);
-            context.SaveChanges();
+            using (var context = new SoftnessContext())
+            {
+                var funcionario = new FuncionarioDAO().BuscaPorId(id);
+                funcionario.Ativo = false;
+                context.Entry(funcionario).State = EntityState.Modified;
+                context.SaveChanges();
             }
         }
 

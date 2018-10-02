@@ -109,6 +109,8 @@ namespace Softness.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Ativo");
+
                     b.Property<string>("Cargo");
 
                     b.Property<string>("NomeDeUsuario");
