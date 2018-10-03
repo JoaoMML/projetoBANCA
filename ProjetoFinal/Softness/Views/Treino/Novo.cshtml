@@ -1,0 +1,105 @@
+﻿<section class="content-header">
+    <h1>
+        Treinos
+        <small> - Novo </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Home/Index"><i class="fa fa-dashboard"></i> Home </a></li>
+        <li><a href="#">Novo</a></li>
+        <li class="active">Treino</li>
+    </ol>
+
+</section>
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Informações:</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                        title="Ampliar/Reduzir">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="box-body">
+
+            <form id="meuform" class="form-horizontal" action="/Treino/AdicionaTreino" method="post">
+                @*@Html.AntiForgeryToken()*@
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nomeExercicio">Exercício:</label>
+                    <div class="col-md-2">
+                        <select id="nomeExercicio" name="ficha.ExercicioId" class="form-control">
+                            <option value=""></option>
+                            @foreach (var exercicio in ViewBag.Exercicios)
+                            {
+                                <option value="@exercicio.Id">@exercicio.ExercicioNome</option>
+                            }
+
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">N° de Séries:</label>
+                    <div class="col-md-3">
+                        <input id="series" name="treino.Series" type="text" placeholder="Digite aqui.." class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">N° Repetições:</label>
+                    <div class="col-md-3">
+                        <input id="repeticoes" name="treino.Repeticoes" type="text" placeholder="Digite aqui.." class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">Carga:</label>
+                    <div class="col-md-3">
+                        <input id="carga" name="treino.Carga" type="text" placeholder="Digite aqui.." class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">Intervalo:</label>
+                    <div class="col-md-3">
+                        <input id="intervalo" name="treino.Intervalo" type="text" placeholder="Digite aqui.." class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="observacoes">Observações:</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="observacoes" name="treino.Observacoes"></textarea>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-5 control-label" for="cadastrar"></label>
+                    <div class="col-md-6">
+                        <button id="cadastrar" type="submit" name="cadastrar" class="btn btn-success">Finalizar Cadastro</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+
+        </div>
+        <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+</section>

@@ -80,6 +80,38 @@ namespace Softness.Migrations
                     b.ToTable("Enderecos");
                 });
 
+            modelBuilder.Entity("Softness.Models.Exercicio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ExercicioNome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Exercicios");
+                });
+
+            modelBuilder.Entity("Softness.Models.ExercicioTreino", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ExercicioId");
+
+                    b.Property<int>("TreinoId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExercicioId");
+
+                    b.HasIndex("TreinoId");
+
+                    b.ToTable("ExercicioTreinos");
+                });
+
             modelBuilder.Entity("Softness.Models.FichaTreino", b =>
                 {
                     b.Property<int>("Id")
@@ -237,6 +269,19 @@ namespace Softness.Migrations
                     b.HasOne("Softness.Models.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("PessoaId");
+                });
+
+            modelBuilder.Entity("Softness.Models.ExercicioTreino", b =>
+                {
+                    b.HasOne("Softness.Models.Exercicio", "Exercicio")
+                        .WithMany()
+                        .HasForeignKey("ExercicioId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Softness.Models.Treino", "Treino")
+                        .WithMany()
+                        .HasForeignKey("TreinoId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Softness.Models.Funcionario", b =>

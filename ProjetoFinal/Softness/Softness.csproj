@@ -6641,12 +6641,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ExercicioController.cs" />
     <Compile Include="Controllers\FichaTreinoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\TreinoController.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\ExercicioDAO.cs" />
     <Compile Include="DAO\FichaTreinoDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
@@ -6701,10 +6703,16 @@
     <Compile Include="Migrations\20181003155016_Duração-Duracao.designer.cs">
       <DependentUpon>20181003155016_Duração-Duracao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20181003194218_ExercicioTreino.cs" />
+    <Compile Include="Migrations\20181003194218_ExercicioTreino.designer.cs">
+      <DependentUpon>20181003194218_ExercicioTreino.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\CategoriaDoProduto.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Exercicio.cs" />
+    <Compile Include="Models\ExercicioTreino.cs" />
     <Compile Include="Models\FichaTreino.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Funcionario.cs" />
@@ -7329,13 +7337,14 @@
     <Content Include="Views\Funcionario\Form.cshtml" />
     <Content Include="Views\Funcionario\Tabela.cshtml" />
     <Content Include="Views\Cliente\Form.cshtml" />
-    <Content Include="Views\Treino\NovoTreino.cshtml" />
     <Content Include="Views\Cliente\Tabela.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Cliente\Home.cshtml" />
     <Content Include="Views\FichaTreino\Nova.cshtml" />
     <Content Include="Views\Cliente\EditaCliente.cshtml" />
     <Content Include="Views\Funcionario\EditaFuncionario.cshtml" />
+    <Content Include="Views\Treino\Novo.cshtml" />
+    <Content Include="Views\Exercicio\Novo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

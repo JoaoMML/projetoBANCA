@@ -18,6 +18,8 @@ namespace Softness.DAO
         public DbSet<FichaTreino> FichaTreinos { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<CategoriaDoProduto> Categorias { get; set; }
+        public DbSet<Exercicio> Exercicios { get; set; }
+        public DbSet<ExercicioTreino> ExercicioTreinos { get; set; }
 
 
 
