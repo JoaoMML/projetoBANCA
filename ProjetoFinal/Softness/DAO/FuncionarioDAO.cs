@@ -57,7 +57,7 @@ namespace Softness.DAO
         {
             using (var contexto = new SoftnessContext())
             {
-                return contexto.Funcionarios.Include(c => c.Pessoa).ToList();
+                return contexto.Funcionarios.Include(c => c.Pessoa).Where(a => a.Ativo == true).ToList();
             }
         }
     }

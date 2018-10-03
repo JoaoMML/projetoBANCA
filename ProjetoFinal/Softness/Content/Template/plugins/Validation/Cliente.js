@@ -24,7 +24,7 @@
             },
             "cliente.pessoa.Email": {
                 required: true,
-                Email: true
+                email: true
 
             },
             "cliente.pessoa.Fone": {
@@ -97,7 +97,8 @@
 
             },
             "cliente.pessoa.Email": {
-                required: "Este campo é obrigatório."
+                required: "Este campo é obrigatório.",
+                email: "Email inválido."
 
             },
             "cliente.pessoa.Fone": {

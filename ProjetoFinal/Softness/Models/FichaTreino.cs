@@ -11,7 +11,7 @@ namespace Softness.Models
         public string NomeFicha { get; set; }
         public string Professor { get; set; }
         public DateTime DataInicio { get; set; }
-        public string TipoDuração { get; set; }
+        public string TipoDuracao { get; set; }
         public string Frequencia { get; set; }
         public string Observacoes { get; set; }
     }

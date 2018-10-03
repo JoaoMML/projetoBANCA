@@ -6697,6 +6697,10 @@
     <Compile Include="Migrations\20181002181928_SituacaoFuncionario.designer.cs">
       <DependentUpon>20181002181928_SituacaoFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20181003155016_Duração-Duracao.cs" />
+    <Compile Include="Migrations\20181003155016_Duração-Duracao.designer.cs">
+      <DependentUpon>20181003155016_Duração-Duracao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\CategoriaDoProduto.cs" />
     <Compile Include="Models\Cliente.cs" />
