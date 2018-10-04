@@ -13,7 +13,7 @@ namespace Softness.Controllers
         // GET: Treino
         public ActionResult Novo()
         {
-            ViewBag.Exercicios = new ExercicioDAO().Lista();
+            ViewBag.Exercicios = new ExercicioDAO().ListaExercicios();
             return View();
         }
 

@@ -1,0 +1,61 @@
+﻿<section class="content-header">
+    <h1>
+        Exercícios
+        <small> - Editar </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Home/Index"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Nova</a></li>
+        <li class="active">Exercicios</li>
+    </ol>
+
+</section>
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Cadastro de Exercícios:</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                        title="Ampliar/Reduzir">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+
+            <input type="hidden" name="exercicio.Id" value="@ViewBag.Exercicio.Id" />
+
+            <form id="meuform" class="form-horizontal" action="/Exercicio/AtualizaExercicio" method="post">
+                @*@Html.AntiForgeryToken()*@
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">Nome do Exercício:</label>
+                    <div class="col-md-3">
+                        <input id="nome" name="exercicio.ExercicioNome" value="@ViewBag.Exercicio.ExercicioNome" type="text" placeholder="Digite aqui.." class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-5 control-label" for="cadastrar"></label>
+                    <div class="col-md-6">
+                        <button id="cadastrar" type="submit" name="cadastrar" class="btn btn-success">Finalizar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+
+        </div>
+        <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+</section>

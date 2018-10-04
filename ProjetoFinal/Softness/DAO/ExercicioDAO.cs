@@ -18,7 +18,8 @@ namespace Softness.DAO
             }
         }
 
-        public IList<Exercicio> Lista()
+
+        public IList<Exercicio> ListaExercicios()
         {
             using (var contexto = new SoftnessContext())
             {
@@ -34,14 +35,15 @@ namespace Softness.DAO
             }
         }
 
-        public void Atualiza(Exercicio Exercicios)
+        public void Atualiza(Exercicio exercicio)
         {
             using (var contexto = new SoftnessContext())
             {
-                contexto.Entry(Exercicios).State = EntityState.Modified;
+                contexto.Exercicios.Update(exercicio);
                 contexto.SaveChanges();
             }
         }
+
 
         public void Remover(Exercicio exercicio)
         {

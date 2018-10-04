@@ -16,13 +16,21 @@ namespace Softness.Controllers
             ViewBag.Exercicios = new Exercicio();
             return View();
         }
+
+        public ActionResult EditaExercicio(int id)
+        {
+            ExercicioDAO dao = new ExercicioDAO();
+            ViewBag.Exercicio = dao.BuscaPorId(id);
+            return View();
+        }
+
         public ActionResult AdicionaExercicio(Exercicio exercicio)
         {
             ExercicioDAO dao = new ExercicioDAO();
             if (exercicio != null)
             {
                 dao.Adiciona(exercicio);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Tabela", "Exercicio");
             }
             else
             {
@@ -30,5 +38,31 @@ namespace Softness.Controllers
             }
         }
 
+        public ActionResult AtualizaExercicio(Exercicio exercicio)
+        {
+            ExercicioDAO dao = new ExercicioDAO();
+            if (exercicio != null)
+            {
+                dao.Atualiza(exercicio);
+                return RedirectToAction("Tabela", "Exercicio");
+            }
+            else
+            {
+                return RedirectToAction("Novo");
+            }
+        }
+
+        public ActionResult Tabela()
+        {
+            return View();
+        }
+
+        public JsonResult ListaExercicios()
+        {
+            return Json(new
+            {
+                data = new ExercicioDAO().ListaExercicios()
+            }, JsonRequestBehavior.AllowGet);
+        }
     }
 }

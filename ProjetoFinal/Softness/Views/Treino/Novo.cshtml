@@ -36,11 +36,11 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="nomeExercicio">Exercício:</label>
                     <div class="col-md-2">
-                        <select id="nomeExercicio" name="ficha.ExercicioId" class="form-control">
+                        <select id="nomeExercicio" name="treino.Exercicio" class="form-control">
                             <option value=""></option>
                             @foreach (var exercicio in ViewBag.Exercicios)
                             {
-                                <option value="@exercicio.Id">@exercicio.ExercicioNome</option>
+                                <option value="@exercicio.ExercicioNome">@exercicio.ExercicioNome</option>
                             }
 
                         </select>

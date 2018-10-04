@@ -7345,6 +7345,8 @@
     <Content Include="Views\Funcionario\EditaFuncionario.cshtml" />
     <Content Include="Views\Treino\Novo.cshtml" />
     <Content Include="Views\Exercicio\Novo.cshtml" />
+    <Content Include="Views\Exercicio\Tabela.cshtml" />
+    <Content Include="Views\Exercicio\EditaExercicio.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
