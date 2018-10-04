@@ -14,6 +14,7 @@ namespace Softness.Models
         public string TipoDuracao { get; set; }
         public string Frequencia { get; set; }
         public string Observacoes { get; set; }
-        //public Treino Treino { get; set; }
+        public Cliente Cliente { get; set; }
+        public int? ClienteId { get; set; }
     }
 }

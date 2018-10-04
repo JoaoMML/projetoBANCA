@@ -80,43 +80,13 @@ namespace Softness.Migrations
                     b.ToTable("Enderecos");
                 });
 
-            modelBuilder.Entity("Softness.Models.Exercicio", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ExercicioNome");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Exercicios");
-                });
-
-            modelBuilder.Entity("Softness.Models.ExercicioTreino", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ExercicioId");
-
-                    b.Property<int>("TreinoId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ExercicioId");
-
-                    b.HasIndex("TreinoId");
-
-                    b.ToTable("ExercicioTreinos");
-                });
-
             modelBuilder.Entity("Softness.Models.FichaTreino", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("ClienteId");
 
                     b.Property<DateTime>("DataInicio");
 
@@ -131,6 +101,8 @@ namespace Softness.Migrations
                     b.Property<string>("TipoDuracao");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("FichaTreinos");
                 });
@@ -228,6 +200,8 @@ namespace Softness.Migrations
 
                     b.Property<string>("Exercicios");
 
+                    b.Property<int?>("FichaTreinoId");
+
                     b.Property<string>("Intervalo");
 
                     b.Property<string>("Observacoes");
@@ -237,6 +211,8 @@ namespace Softness.Migrations
                     b.Property<string>("Series");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FichaTreinoId");
 
                     b.ToTable("Treinos");
                 });
@@ -271,17 +247,11 @@ namespace Softness.Migrations
                         .HasForeignKey("PessoaId");
                 });
 
-            modelBuilder.Entity("Softness.Models.ExercicioTreino", b =>
+            modelBuilder.Entity("Softness.Models.FichaTreino", b =>
                 {
-                    b.HasOne("Softness.Models.Exercicio", "Exercicio")
+                    b.HasOne("Softness.Models.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("ExercicioId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Softness.Models.Treino", "Treino")
-                        .WithMany()
-                        .HasForeignKey("TreinoId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ClienteId");
                 });
 
             modelBuilder.Entity("Softness.Models.Funcionario", b =>
@@ -304,6 +274,13 @@ namespace Softness.Migrations
                     b.HasOne("Softness.Models.CategoriaDoProduto", "Categoria")
                         .WithMany()
                         .HasForeignKey("CategoriaId");
+                });
+
+            modelBuilder.Entity("Softness.Models.Treino", b =>
+                {
+                    b.HasOne("Softness.Models.FichaTreino", "FichaTreino")
+                        .WithMany()
+                        .HasForeignKey("FichaTreinoId");
                 });
 
             modelBuilder.Entity("Softness.Models.TreinoCliente", b =>

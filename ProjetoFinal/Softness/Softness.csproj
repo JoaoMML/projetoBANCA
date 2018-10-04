@@ -6648,7 +6648,6 @@
     <Compile Include="Controllers\TreinoController.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
-    <Compile Include="DAO\ExercicioDAO.cs" />
     <Compile Include="DAO\FichaTreinoDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
@@ -6706,6 +6705,22 @@
     <Compile Include="Migrations\20181003194218_ExercicioTreino.cs" />
     <Compile Include="Migrations\20181003194218_ExercicioTreino.designer.cs">
       <DependentUpon>20181003194218_ExercicioTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181004174212_RemoverExercicio.cs" />
+    <Compile Include="Migrations\20181004174212_RemoverExercicio.designer.cs">
+      <DependentUpon>20181004174212_RemoverExercicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181004184644_ClienteFicha.cs" />
+    <Compile Include="Migrations\20181004184644_ClienteFicha.designer.cs">
+      <DependentUpon>20181004184644_ClienteFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181004185236_relacaoTreinoFicha.cs" />
+    <Compile Include="Migrations\20181004185236_relacaoTreinoFicha.designer.cs">
+      <DependentUpon>20181004185236_relacaoTreinoFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181004190801_FichaVariosTreinos.cs" />
+    <Compile Include="Migrations\20181004190801_FichaVariosTreinos.designer.cs">
+      <DependentUpon>20181004190801_FichaVariosTreinos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\CategoriaDoProduto.cs" />

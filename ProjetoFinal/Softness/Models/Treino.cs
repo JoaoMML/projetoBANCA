@@ -14,6 +14,8 @@ namespace Softness.Models
         public string Carga { get; set; }
         public string Intervalo { get; set; }
         public string Observacoes { get; set; }
+        public FichaTreino FichaTreino { get; set; }
+        public  int? FichaTreinoId { get; set; }
 
         //public string TreinosDia {get;set;}
         //public string TreinosRealizados { get; set; }
