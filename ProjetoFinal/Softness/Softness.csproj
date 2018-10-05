@@ -6648,6 +6648,7 @@
     <Compile Include="Controllers\TreinoController.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\ExercicioDAO.cs" />
     <Compile Include="DAO\FichaTreinoDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\SoftnessContext.cs" />
@@ -6722,19 +6723,25 @@
     <Compile Include="Migrations\20181004190801_FichaVariosTreinos.designer.cs">
       <DependentUpon>20181004190801_FichaVariosTreinos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20181005180722_Atualizando.cs" />
+    <Compile Include="Migrations\20181005180722_Atualizando.designer.cs">
+      <DependentUpon>20181005180722_Atualizando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181005192414_Hard.cs" />
+    <Compile Include="Migrations\20181005192414_Hard.designer.cs">
+      <DependentUpon>20181005192414_Hard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SoftnessContextModelSnapshot.cs" />
     <Compile Include="Models\CategoriaDoProduto.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Exercicio.cs" />
-    <Compile Include="Models\ExercicioTreino.cs" />
     <Compile Include="Models\FichaTreino.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Plano.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Treino.cs" />
-    <Compile Include="Models\TreinoCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

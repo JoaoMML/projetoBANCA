@@ -80,6 +80,31 @@ namespace Softness.Migrations
                     b.ToTable("Enderecos");
                 });
 
+            modelBuilder.Entity("Softness.Models.Exercicio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Carga");
+
+                    b.Property<string>("ExercicioNome");
+
+                    b.Property<string>("Intervalo");
+
+                    b.Property<string>("Repeticoes");
+
+                    b.Property<string>("Series");
+
+                    b.Property<int?>("TreinoId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TreinoId");
+
+                    b.ToTable("Exercicios");
+                });
+
             modelBuilder.Entity("Softness.Models.FichaTreino", b =>
                 {
                     b.Property<int>("Id")
@@ -196,19 +221,11 @@ namespace Softness.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Carga");
-
-                    b.Property<string>("Exercicios");
-
                     b.Property<int?>("FichaTreinoId");
 
-                    b.Property<string>("Intervalo");
-
-                    b.Property<string>("Observacoes");
-
-                    b.Property<string>("Repeticoes");
-
-                    b.Property<string>("Series");
+                    b.Property<string>("NomeTreino")
+                        .IsRequired()
+                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)));
 
                     b.HasKey("Id");
 
@@ -217,34 +234,18 @@ namespace Softness.Migrations
                     b.ToTable("Treinos");
                 });
 
-            modelBuilder.Entity("Softness.Models.TreinoCliente", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ClienteId");
-
-                    b.Property<string>("TipoTreino")
-                        .IsRequired()
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)));
-
-                    b.Property<int>("TreinoId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClienteId");
-
-                    b.HasIndex("TreinoId");
-
-                    b.ToTable("TreinoClientes");
-                });
-
             modelBuilder.Entity("Softness.Models.Cliente", b =>
                 {
                     b.HasOne("Softness.Models.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("PessoaId");
+                });
+
+            modelBuilder.Entity("Softness.Models.Exercicio", b =>
+                {
+                    b.HasOne("Softness.Models.Treino", "Treino")
+                        .WithMany()
+                        .HasForeignKey("TreinoId");
                 });
 
             modelBuilder.Entity("Softness.Models.FichaTreino", b =>
@@ -281,19 +282,6 @@ namespace Softness.Migrations
                     b.HasOne("Softness.Models.FichaTreino", "FichaTreino")
                         .WithMany()
                         .HasForeignKey("FichaTreinoId");
-                });
-
-            modelBuilder.Entity("Softness.Models.TreinoCliente", b =>
-                {
-                    b.HasOne("Softness.Models.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Softness.Models.Treino", "Treino")
-                        .WithMany()
-                        .HasForeignKey("TreinoId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

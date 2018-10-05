@@ -14,11 +14,10 @@ namespace Softness.DAO
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Treino> Treinos { get; set; }
-        public DbSet<TreinoCliente> TreinoClientes { get; set; }
         public DbSet<FichaTreino> FichaTreinos { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<CategoriaDoProduto> Categorias { get; set; }
-
+        public DbSet<Exercicio> Exercicios { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

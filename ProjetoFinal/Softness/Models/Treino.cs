@@ -8,22 +8,10 @@ namespace Softness.Models
     public class Treino
     {
         public int Id { get; set; }
-        public string Exercicios { get; set; }
-        public string Series { get; set; }
-        public string Repeticoes { get; set; }
-        public string Carga { get; set; }
-        public string Intervalo { get; set; }
-        public string Observacoes { get; set; }
+        public char NomeTreino { get; set; }
         public FichaTreino FichaTreino { get; set; }
         public  int? FichaTreinoId { get; set; }
 
-        //public string TreinosDia {get;set;}
-        //public string TreinosRealizados { get; set; }
-        //public string Personal { get; set; }
-        //public string Categoria { get; set; }
-        //public float Peso { get; set; }
-        //public float Altura { get; set; }
-        //public float Imc { get; set; }
     }
    
 }

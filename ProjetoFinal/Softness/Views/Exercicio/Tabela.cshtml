@@ -16,8 +16,8 @@
 
             <div class=" margin-bottom text-right">
                 <a type="button" href="/Exercicio/Novo" id="novo" name="cadastrar" class="btn btn-success">Novo</a>
-                <button type="button" id="editar" name="editar" class="btn bg-blue-active">Editar</button>
-                <button type="button" id="excluir" name="excluir" class="btn btn-google">Excluir</button>
+                @*<button type="button" id="editar" name="editar" class="btn bg-blue-active">Editar</button>
+                <button type="button" id="excluir" name="excluir" class="btn btn-google">Excluir</button>*@
             </div>
 
 
@@ -27,6 +27,10 @@
                     <tr>
                         <th>Id</th>
                         <th>Exercícios</th>
+                        <th>Series</th>
+                        <th>Repetições</th>
+                        <th>Carga</th>
+                        <th>Intervalo</th>
                     </tr>
                 </thead>
             </table>
@@ -77,6 +81,10 @@
 
                     { "data": "Id", "autoWidth": true },
                     { "data": "ExercicioNome", "autoWidth": true },
+                    { "data": "Series", "autoWidth": true },
+                    { "data": "Repeticoes", "autoWidth": true },
+                    { "data": "Carga", "autoWidth": true },
+                    { "data": "Intervalo", "autoWidth": true },
                 ]
             });
 
@@ -94,7 +102,7 @@
                     dataType: "json",
                     success: function (response) {
                         if (response.excluiu) {
-                            alert ("Cliente apagado!");
+                            alert("Cliente apagado!");
                             tabelaExercicios.ajax.reload();
                         }
                     }

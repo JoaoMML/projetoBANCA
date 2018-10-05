@@ -31,21 +31,48 @@
                 @*@Html.AntiForgeryToken()*@
 
                 <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="nome">Nome do Exercício:</label>
-                    <div class="col-md-3">
-                        <input id="nome" name="exercicio.ExercicioNome" type="text" placeholder="Digite aqui.." class="form-control input-md">
 
+                <div class="form-body no-space">
+                    <div class="col-md-4 noPaddingRight">
+                        <div class="form-group sem-margem-bottom divExercicio">
+                            <label class="control-label label_exercicio h6 text-danger"><strong>Exercício</strong></label>
+                            <input id="nome" name="exercicio.ExercicioNome" type="text" placeholder="Digite aqui.." class="form-control input-md">
+                        </div>
                     </div>
-                </div>
+                    <div class="col-md-1 noPaddingRight">
+                        <div class="form-group sem-margem-bottom">
+                            <label class="control-label h6 text-danger"><strong>Série</strong></label>
+                            <input id="series" name="exercicio.Series" type="text" class="form-control input-md">
+                            <span class="help-block series-nulo display-none">Obrigatório</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 noPaddingRight">
+                        <div class="form-group sem-margem-bottom">
+                            <label class="control-label h6 text-danger"><strong>Repetições</strong></label>
+                            <input id="repeticoes" name="exercicio.Repeticoes" type="text" placeholder="" class="form-control input-md">
+                            <span class="help-block repeticoes-nulo display-none">Obrigatório</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 noPaddingRight">
+                        <div class="form-group sem-margem-bottom">
+                            <label class="control-label h6 text-danger"><strong>Carga</strong></label>
+                            <input id="carga" name="exercicio.Carga" type="text" placeholder="" class="form-control input-md">
+                        </div>
+                    </div>
+                    <div class="col-md-1 noPaddingRight">
+                        <div class="form-group sem-margem-bottom">
+                            <label class="control-label h6 text-danger"><strong>Intervalo</strong></label>
+                            <input id="intervalo" name="exercicio.Intervalo" type="text" placeholder="" class="form-control input-md">
+                            <span class="help-block repeticoes-nulo display-none">Obrigatório</span>
+                        </div>
+                    </div>
 
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-5 control-label" for="cadastrar"></label>
-                    <div class="col-md-6">
-                        <button id="cadastrar" type="submit" name="cadastrar" class="btn btn-success">Finalizar</button>
+                    <div class="col-md-2 noPaddingRight" style=" padding-top: 35px; ">
+                        <button class="btn bg-blue fa fa-check"></button>
                     </div>
+                    <div class="clearfix"></div>
                 </div>
+               
 
             </form>
         </div>
