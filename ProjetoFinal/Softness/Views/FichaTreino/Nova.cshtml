@@ -28,7 +28,7 @@
         <div class="box-body">
 
             <form id="meuform" class="form-horizontal" action="/FichaTreino/AdicionaFicha" method="post">
-                @*@Html.AntiForgeryToken()*@
+
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -45,6 +45,15 @@
                     <label class="col-md-4 control-label" for="nome">Nome do Responsável:</label>
                     <div class="col-md-3">
                         <input id="professor" name="ficha.Professor" type="text" placeholder="Digite aqui.." class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tipoDuracao">Cliente: </label>
+                    <div class="col-md-4">
+                        <select id="selectClientes" name="ficha.ClienteId" class="form-control">
+                            <option></option>
+                        </select>
                     </div>
                 </div>
 
@@ -98,7 +107,7 @@
                 <div class="form-group">
                     <label class="col-md-5 control-label" for="cadastrar"></label>
                     <div class="col-md-6">
-                        <button id="cadastrar" type="submit" name="cadastrar" class="btn btn-success">Finalizar Cadastro</button>
+                        <button id="cadastrar" type="submit" name="cadastrar" class="btn btn-success">Finalizar</button>
                     </div>
                 </div>
 
@@ -112,3 +121,33 @@
     </div>
     <!-- /.box -->
 </section>
+
+@section Index_scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "/FichaTreino/ListaClientes",
+                data: { ListaClientes: $("#selectClientes").val() },
+                dataType: 'json',
+                contentType: "application/json; charset=utf-8",
+                success: function (obj) {
+                    var data = obj.data;
+                    if (obj != null) {
+                        var selectbox = $('#selectClientes').select();
+                        selectbox.find('option').remove();
+                        $('<option>').val("").appendTo(selectbox);
+                        $.each(data, function (i, d) {
+                            $('<option>').val(d.Id).text(d.Pessoa.Nome).appendTo(selectbox);
+                        });
+                    }
+                },
+
+            });
+
+        });
+
+    </script>
+    
+    }

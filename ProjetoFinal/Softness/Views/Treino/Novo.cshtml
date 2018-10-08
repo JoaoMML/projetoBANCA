@@ -28,20 +28,29 @@
 
         <div class="box-body">
 
-            <form id="meuform" class="form" action="/Treino/AdicionaTreino" method="post">
 
-                @*@Html.AntiForgeryToken()*@
-     
 
-                <!-- Button -->
-                <div class="form-horizontal">
-                    <label class="col-md-5 control-label" for="cadastrar"></label>
-                    <div class="col-md-1">
-                        <button id="cadastrar" type="submit" name="cadastrar" class="btn btn-success">Finalizar Cadastro</button>
+            @*@Html.AntiForgeryToken()*@
+            <div class="form-group">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="treino">Nome Treino:</label>
+                    <div class="col-md-3">
+                        <input id="nomeTreino" name="treino.NomeTreino" type="text" placeholder="Digite aqui o nome do treino.." class="form-control input-md">
+
                     </div>
                 </div>
 
-            </form>
+
+           
+                    <div class="col-md-1">
+                        <a href="#" onclick="SalvarTreino();" class="btn btn-success" style=" height: 35px; ">Novo</a>
+                    </div>
+
+            <div id="divExercicios" style="display:none;">
+
+            </div>
+
+
 
         </div>
         <!-- /.box-body -->
@@ -52,3 +61,7 @@
     </div>
     <!-- /.box -->
 </section>
+
+@section Index_scripts{
+    <script src="~/Content/Template/plugins/ArquivosJS/Treino.js"></script>
+}

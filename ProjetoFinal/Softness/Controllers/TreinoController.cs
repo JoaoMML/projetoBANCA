@@ -20,15 +20,11 @@ namespace Softness.Controllers
         public ActionResult AdicionaTreino(Treino treino)
         {
             TreinosDAO dao = new TreinosDAO();
-            if (treino != null)
+            if (ModelState.IsValid)
             {
                 dao.Adiciona(treino);
-                return RedirectToAction("Index", "Home");
             }
-            else
-            {
-                return RedirectToAction("Novo");
-            }
+            return Json(new { Resultado = treino.Id }, JsonRequestBehavior.AllowGet);
         }
     }
 }

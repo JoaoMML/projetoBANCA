@@ -18,17 +18,18 @@
                 <a type="button" href="/Cliente/Form" id="novo" name="cadastrar" class="btn btn-success">Novo</a>
                 <button type="button" id="editar" name="editar" class="btn bg-blue-active">Editar</button>
                 <button type="button" id="excluir" name="excluir" class="btn btn-google">Excluir</button>
+                @*<button type="button" id="ficha" name="ficha" class="btn bg-yellow">Ficha</button>*@
             </div>
 
 
 
-            <table id="UsuariosTabela" class="table table-striped table-hover dataTable">
+            <table id="UsuariosTabela" class="table table-striped table-hover dataTable text-center">
                 <thead>
                     <tr>
-                        <th>Matricula</th>
+                        <th>Código do Cliente</th>
                         <th>Cliente</th>
                         <th>Nome De Usuário</th>
-                        <th>Senha</th>
+                        @*<th>Senha</th>   { "data": "Senha", "autoWidth": true }, *@
                         <th>CPF</th>
                         <th>RG</th>
                         <th>Email</th>
@@ -51,7 +52,7 @@
                     {
                         "info": "Total: _TOTAL_ cliente(s) - Página _PAGE_ de _PAGES_.",
                         "zeroRecords": "Nenhum resultado encontrado.",
-                        "infoEmpty": "Mostrando 0 marcas.",
+                        "infoEmpty": "Mostrando 0 clientes.",
                         "infoFiltered": "(Filtrado de _MAX_ itens.)",
                         "decimal": ",",
                         "thousands": ".",
@@ -84,7 +85,7 @@
                     { "data": "Id", "autoWidth": true },
                     { "data": "Pessoa.Nome", "autoWidth": true },
                     { "data": "NomeUsuario", "autoWidth": true },
-                    { "data": "Senha", "autoWidth": true },
+                
                     { "data": "Pessoa.Cpf", "autoWidth": true },
                     { "data": "Pessoa.Rg", "autoWidth": true },
                     { "data": "Pessoa.Email", "autoWidth": true },
@@ -112,6 +113,13 @@
                     }
                 });
             });
+
+        $('#ficha').click(function () {
+                var ClienteId = tabelaUsuarios.rows({ selected: true }).data()[0].Id;
+                window.location.href = "/FichaTreino/Nova"
+            });
+
+
         });
     </script>
 

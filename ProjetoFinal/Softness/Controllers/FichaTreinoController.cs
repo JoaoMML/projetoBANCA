@@ -13,7 +13,8 @@ namespace Softness.Controllers
         public ActionResult Nova()
         {
             ViewBag.FichaTreino = new FichaTreino();
- 
+            ClienteDAO dao = new ClienteDAO();
+
             return View();
         }
 
@@ -30,5 +31,15 @@ namespace Softness.Controllers
                 return RedirectToAction("Nova");
             }
         }
+
+        public JsonResult ListaClientes()
+        {
+            return Json(new
+            {
+                data = new ClienteDAO().ListaClientes()
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+
     }
 }

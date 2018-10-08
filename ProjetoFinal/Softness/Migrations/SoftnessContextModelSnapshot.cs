@@ -223,9 +223,7 @@ namespace Softness.Migrations
 
                     b.Property<int?>("FichaTreinoId");
 
-                    b.Property<string>("NomeTreino")
-                        .IsRequired()
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)));
+                    b.Property<string>("NomeTreino");
 
                     b.HasKey("Id");
 

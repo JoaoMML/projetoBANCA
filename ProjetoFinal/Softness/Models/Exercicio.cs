@@ -15,5 +15,6 @@ namespace Softness.Models
         public string Intervalo { get; set; }
         public Treino Treino { get; set; }
         public int? TreinoId { get; set; }
+
     }
 }

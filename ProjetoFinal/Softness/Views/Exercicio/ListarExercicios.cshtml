@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Softness.Models.Exercicio>
+
+<!-- Text input-->
+
+<div class="form-body no-space">
+    <div class="col-md-5 noPaddingRight">
+        <div class="form-group sem-margem-bottom divExercicio">
+            <label class="control-label label_exercicio h6 text-danger"><strong>Exercício</strong></label>
+            <input id="Nome" name="exercicio.ExercicioNome" type="text" placeholder="Digite aqui.." class="form-control input-md">
+        </div>
+    </div>
+    <div class="col-md-1 noPaddingRight">
+        <div class="form-group sem-margem-bottom">
+            <label class="control-label h6 text-danger"><strong>Série</strong></label>
+            <input id="Serie" name="exercicio.Series" type="text" class="form-control input-md">
+            <span class="help-block series-nulo display-none">Obrigatório</span>
+        </div>
+    </div>
+    <div class="col-md-1 noPaddingRight">
+        <div class="form-group sem-margem-bottom">
+            <label class="control-label h6 text-danger"><strong>Repetições</strong></label>
+            <input id="Repeticoes" name="exercicio.Repeticoes" type="text" placeholder="" class="form-control input-md">
+            <span class="help-block repeticoes-nulo display-none">Obrigatório</span>
+        </div>
+    </div>
+    <div class="col-md-1 noPaddingRight">
+        <div class="form-group sem-margem-bottom">
+            <label class="control-label h6 text-danger"><strong>Carga</strong></label>
+            <input id="Carga" name="exercicio.Carga" type="text" placeholder="" class="form-control input-md">
+        </div>
+    </div>
+    <div class="col-md-1 noPaddingRight">
+        <div class="form-group sem-margem-bottom">
+            <label class="control-label h6 text-danger"><strong>Intervalo</strong></label>
+            <input id="Intervalo" name="exercicio.Intervalo" type="text" placeholder="" class="form-control input-md">
+            <span class="help-block repeticoes-nulo display-none">Obrigatório</span>
+        </div>
+    </div>
+
+    <div class="col-md-2 noPaddingRight" style=" padding-top: 35px; ">
+        <a href="#" onclick="SalvarExercicios();" class="btn bg-blue fa fa-check"></a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<input type="hidden" id="idTreino" value="@ViewBag.Treino" />

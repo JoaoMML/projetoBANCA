@@ -8,7 +8,7 @@ namespace Softness.Models
     public class Treino
     {
         public int Id { get; set; }
-        public char NomeTreino { get; set; }
+        public string NomeTreino { get; set; }
         public FichaTreino FichaTreino { get; set; }
         public  int? FichaTreinoId { get; set; }
 
